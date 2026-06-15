@@ -1,7 +1,621 @@
 <!DOCTYPE html>
-<html>
-<head><title>Avi8AI</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PilotBriefAI | AI Preflight Intelligence for EFB Pilots</title>
+  <meta name="description" content="PilotBriefAI augments ForeFlight and Garmin Pilot with AI preflight briefings, personal-minimums Go / Marginal / No-Go analysis, route PIREPs, live ATC, and ADS-B tracking.">
+  <meta property="og:title" content="PilotBriefAI | AI preflight intelligence for EFB pilots">
+  <meta property="og:description" content="Brief smarter before you open your EFB. AI Go / Marginal / No-Go decisions, route PIREPs, live ATC, and ADS-B tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avi8ai.com/">
+  <meta property="og:image" content="https://avi8ai.com/assets/pilotbriefai-icon-512.png">
+  <link rel="canonical" href="https://avi8ai.com/">
+  <link rel="icon" href="assets/pilotbriefai-icon-192.png">
+  <link rel="apple-touch-icon" href="assets/pilotbriefai-icon-512.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <h1>Welcome to Avi8AI</h1>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="PilotBriefAI home">
+        <img class="brand-mark" src="assets/pilotbriefai-icon-192.png" alt="">
+        <span><small>AVI8AI</small>PilotBriefAI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#efb">EFB Layer</a>
+        <a href="#features">Features</a>
+        <a href="#cfi">CFIs</a>
+        <a href="#ai">Claude AI</a>
+        <a href="#pricing">Pricing</a>
+        <a href="support/index.html">Support</a>
+        <a class="btn primary" href="#download">Download app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span>AI preflight intelligence</p>
+          <h1>Brief smarter before you open your EFB.</h1>
+          <p class="lead">ForeFlight and Garmin Pilot are built for charts, plates, filing, and navigation. PilotBriefAI is built for the decision before that: Claude reads live aviation data, checks it against your personal minimums and aircraft, then gives you a plain-English Go / Marginal / No-Go briefing.</p>
+          <div class="store-row hero-store" id="download" aria-label="Download PilotBriefAI">
+            <a class="store-badge" href="download/ios/index.html" aria-label="Download PilotBriefAI on the App Store">
+              <img src="assets/store/app-store.svg" alt="Download on the App Store">
+            </a>
+            <a class="store-badge" href="download/android/index.html" aria-label="Get PilotBriefAI on Google Play">
+              <img src="assets/store/google-play.svg" alt="Get it on Google Play">
+            </a>
+          </div>
+          <p class="hero-kicker">AI weather synthesis, route PIREPs, live ATC audio, and live ADS-B tracking in one app. Fully featured for 14 days, no credit card.</p>
+          <div class="hero-actions">
+            <a class="btn ghost" href="#decision"><ion-icon name="shield-checkmark"></ion-icon>See the Go/No-Go flow</a>
+          </div>
+          <div class="trial-note">
+            <span><span class="dot go"></span>Download the app to activate the trial</span>
+            <span><span class="dot go"></span>Full IFR-tier access</span>
+            <span><span class="dot mvfr"></span>No credit card</span>
+            <span><span class="dot warn"></span>One trial per pilot</span>
+          </div>
+          <div class="chip-row" aria-label="FAA flight categories">
+            <span class="chip"><span class="dot vfr"></span>VFR</span>
+            <span class="chip"><span class="dot mvfr"></span>MVFR</span>
+            <span class="chip"><span class="dot ifr"></span>IFR</span>
+            <span class="chip"><span class="dot lifr"></span>LIFR</span>
+          </div>
+        </div>
+
+        <div class="flight-deck" aria-label="PilotBriefAI app preview">
+          <div class="phone left"><img src="assets/screenshots/live-track.jpg" alt="PilotBriefAI live sectional tracking screen"></div>
+          <div class="phone main"><img src="assets/screenshots/briefing.jpg" alt="PilotBriefAI briefing screen with marginal risk analysis"></div>
+          <div class="phone right"><img src="assets/screenshots/dashboard.jpg" alt="PilotBriefAI dashboard METAR screen"></div>
+          <div class="deck-card metar-tile" aria-hidden="true">
+            <img src="assets/metarcard.png" alt="PilotBriefAI live METAR card with satellite imagery, runway wind rose, and one-tap Live ATC and briefing">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trial-band">
+      <div class="container">
+        <div>
+          <p class="eyebrow" style="margin-bottom: 8px;">14-day free trial</p>
+          <h2 style="margin-bottom: 0;">Download the app. Activate the 14-day trial inside PilotBriefAI.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dashboard">
+      <div class="container dashboard-spotlight">
+        <div>
+          <p class="eyebrow">Your daily cockpit view</p>
+          <h2>The screen pilots come back to before every flight.</h2>
+          <p class="lead">PilotBriefAI opens on the airport picture that matters most: your watched field, favorite ATIS frequencies, live METAR category, runway wind, sunset/night timing, nearby advisories, and one-tap access to the full AI briefing.</p>
+          <div class="dashboard-points">
+            <div class="dashboard-point">
+              <span class="dash-icon"><ion-icon name="radio"></ion-icon></span>
+              <div><h3>Favorite ATIS at your fingertips</h3><p>Jump straight to KAUS, KNEW, KGTU, or any saved airport without hunting through menus.</p></div>
+            </div>
+            <div class="dashboard-point">
+              <span class="dash-icon"><ion-icon name="partly-sunny"></ion-icon></span>
+              <div><h3>Watched airport status</h3><p>Flight category, wind, visibility, ceiling, runway wind, density altitude, and advisories stay visible in one scan.</p></div>
+            </div>
+            <div class="dashboard-point">
+              <span class="dash-icon"><ion-icon name="navigate"></ion-icon></span>
+              <div><h3>From glance to briefing</h3><p>Tap the airport card to move from dashboard awareness into the Claude-powered Go / Marginal / No-Go briefing.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-visual dashboard-phone">
+          <img src="assets/screenshots/dashboard-home.png" alt="PilotBriefAI dashboard with watched airport, ATIS shortcuts, METAR card, runway wind, and advisories">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="efb">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Works with what you already fly</p>
+          <h2>The pre-flight decision layer your EFB is missing.</h2>
+          <p class="lead">ForeFlight and Garmin Pilot are brilliant at charts, plates, filing, and navigation. None of them tell you, in plain English and judged against your minimums, whether today is a go. That's the gap PilotBriefAI fills.</p>
+        </div>
+        <div class="grid three workflow">
+          <article class="panel">
+            <span class="step-num">01</span>
+            <div><h3>Brief in PilotBriefAI</h3><p>Claude synthesizes live weather into a go/no-go judged against your personal minimums and aircraft.</p></div>
+          </article>
+          <article class="panel">
+            <span class="step-num">02</span>
+            <div><h3>Cross-check the raw data</h3><p>METAR/TAF, crosswind, density altitude, route hazards, winds aloft, ATC audio, and traffic context stay close at hand.</p></div>
+          </article>
+          <article class="panel">
+            <span class="step-num">03</span>
+            <div><h3>File and fly in your EFB</h3><p>Take the decision to ForeFlight or Garmin Pilot for charts, plates, filing, and georeferenced navigation.</p></div>
+          </article>
+        </div>
+        <div class="panel quote-panel">
+          <p>Your EFB shows you the weather. PilotBriefAI tells you what it means for you, then gets out of the way so you can fly.</p>
+        </div>
+        <div class="panel efb-table" aria-label="PilotBriefAI compared with raw weather sites and EFBs">
+          <table>
+            <thead>
+              <tr><th>Capability</th><th>Raw weather sites</th><th>EFBs like ForeFlight / Garmin Pilot</th><th>PilotBriefAI</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Live METAR / TAF / NOTAM data</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Charts, plates, filing, georeferenced navigation</td><td class="no">No</td><td class="yes">Yes</td><td class="no">No, by design</td></tr>
+              <tr><td>AI Go / Marginal / No-Go judged against your personal minimums</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+              <tr><td>Plain-English PAVE risk synthesis</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+              <tr><td>Route PIREPs mapped and interpreted by AI</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
+              <tr><td>Live ATC audio in the briefing flow</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+              <tr><td>Live ADS-B tracking on VFR sectionals</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
+              <tr><td>Role in your workflow</td><td>Source data</td><td>File and fly</td><td>Brief, decide, then use your EFB</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="decision">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Complete preflight briefing</p>
+          <h2>Every section. Labeled when Claude is doing the work.</h2>
+          <p class="lead">PilotBriefAI pulls from 8+ live FAA/NOAA sources. Most sections show raw data exactly as received. The AI sections are where Claude reads everything together and writes the judgment.</p>
+        </div>
+
+        <div class="brief-groups">
+          <div class="panel brief-group ai-group">
+            <div class="boi-badge"><ion-icon name="sparkles"></ion-icon>Claude AI</div>
+            <h3>AI Analysis</h3>
+            <p>Claude reads every source together and writes the sections that require judgment — a verdict checked against your specific certificate, minimums, and aircraft, not a summary of decoded strings.</p>
+            <ul class="brief-feat">
+              <li><ion-icon name="chevron-forward"></ion-icon>Go / No-Go Verdict</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>PAVE Analysis</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Route Risk Corridor</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>SIGMET / AIRMET Synthesis</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>PIREP Synthesis</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>NOTAM Summary</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>IFR Alternate Analysis<small>IFR+</small></li>
+            </ul>
+          </div>
+
+          <div class="panel brief-group">
+            <div class="boi-badge data"><ion-icon name="cloud-outline"></ion-icon>Live data</div>
+            <h3>Conditions &amp; Airspace</h3>
+            <p>Live FAA/NOAA feeds displayed exactly as received with color-coded flight categories and your aircraft limits applied.</p>
+            <ul class="brief-feat">
+              <li><ion-icon name="chevron-forward"></ion-icon>METAR + TAF</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Winds Aloft Chart</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Crosswind Analysis</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Density Altitude</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Fuel &amp; FBO Availability</li>
+            </ul>
+          </div>
+
+          <div class="panel brief-group">
+            <div class="boi-badge live"><ion-icon name="radio-outline"></ion-icon>Live tools</div>
+            <h3>Live Cockpit Tools</h3>
+            <p>Real-time audio and traffic built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
+            <ul class="brief-feat">
+              <li><ion-icon name="chevron-forward"></ion-icon>Live ATC Audio</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>ADS-B Traffic Tracking</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Animated Weather Maps</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="decision-panel">
+          <div class="panel brief-card">
+            <div class="brief-top">
+              <span class="eyebrow" style="margin: 0;">AI flight summary</span>
+              <span class="chip"><span class="dot warn"></span>MARGINAL</span>
+            </div>
+            <div class="verdict-bar">MARGINAL</div>
+            <span class="ai-badge"><ion-icon name="sparkles"></ion-icon>Powered by Claude</span>
+            <h2>It evaluates you, not just the weather.</h2>
+            <p class="lead">Raw weather tools show conditions. PilotBriefAI checks those conditions against your personal minimums, certificate level, aircraft profile, and route context, then explains the risk in pilot language.</p>
+            <div class="metrics">
+              <div class="mini-metric"><span class="metric-label">Ceiling</span><b>2,500 ft</b></div>
+              <div class="mini-metric"><span class="metric-label">Crosswind</span><b>0 kt</b></div>
+              <div class="mini-metric"><span class="metric-label">Hazards</span><b>TFR + TSRA</b></div>
+            </div>
+          </div>
+          <div class="panel gng-panel">
+            <div class="gng-stack">
+              <div class="gng-option"><strong><span class="dot go"></span>GO</strong><p>Conditions are inside your minimums, with no major route blockers identified.</p></div>
+              <div class="gng-option active"><strong><span class="dot warn"></span>MARGINAL</strong><p>Flyable only with mitigation, alternates, and careful verification against official sources.</p></div>
+              <div class="gng-option"><strong><span class="dot ifr"></span>NO-GO</strong><p>Conditions or hazards exceed your profile, aircraft, or route risk limits.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact alt">
+      <div class="container stat-strip" aria-label="PilotBriefAI proof points">
+        <div class="stat-tile"><strong>~15s</strong><span>from tap to multi-source AI briefing</span></div>
+        <div class="stat-tile"><strong>8+</strong><span>live data feeds synthesized per briefing</span></div>
+        <div class="stat-tile"><strong>4</strong><span>FAA flight categories color-coded everywhere</span></div>
+        <div class="stat-tile"><strong>100%</strong><span>public-domain U.S. weather and NOTAM sources</span></div>
+        <div class="stat-tile"><strong>14</strong><span>days of full IFR trial access</span></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="features">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Decision-focused planning</p>
+          <h2>Built for the whole pilot journey.</h2>
+          <p class="lead">From VFR go/no-go decisions to IFR alternate planning to CFI teaching moments, the app is organized around the decisions that actually matter before flight.</p>
+        </div>
+        <div class="grid three suite-grid">
+          <article class="panel suite-card">
+            <div class="suite-top">
+              <span class="icon-tile"><ion-icon name="partly-sunny"></ion-icon></span>
+              <span class="ai-badge"><ion-icon name="sparkles"></ion-icon>Claude powered</span>
+            </div>
+            <h3>VFR safety suite</h3>
+            <p>Departure, destination, and alternate weather analyzed in one briefing so you know your outs before you go.</p>
+            <div class="feature-list">
+              <span><ion-icon name="checkmark-circle"></ion-icon>Crosswind component analysis against your aircraft limit</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Density altitude, takeoff penalty, and IMSAFE checks</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Claude calls out icing, turbulence, PIREPs, and IFR conditions on your corridor by name</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Live ATC audio, route PIREPs, fuel, FBOs, and Windy maps</span>
+            </div>
+          </article>
+          <article class="panel suite-card">
+            <div class="suite-top">
+              <span class="icon-tile"><ion-icon name="navigate"></ion-icon></span>
+              <span class="ai-badge"><ion-icon name="sparkles"></ion-icon>Claude powered</span>
+            </div>
+            <h3>IFR planning suite</h3>
+            <p>For serious GA pilots who need more than legal minimums and a wall of decoded weather strings.</p>
+            <div class="feature-list">
+              <span><ion-icon name="checkmark-circle"></ion-icon>Claude ranks alternates by real flyability, fuel budget, forecast window, and legal minima</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Claude reads FD winds and recommends cruise altitude with reasoning</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Hourly NBM forecast and terrain awareness</span>
+            </div>
+          </article>
+          <article class="panel suite-card">
+            <div class="suite-top">
+              <span class="icon-tile"><ion-icon name="school"></ion-icon></span>
+              <span class="ai-badge"><ion-icon name="sparkles"></ion-icon>Claude powered</span>
+            </div>
+            <h3>CFI toolkit</h3>
+            <p>Manage students, aircraft, teaching notes, and shared briefing records from one instructor workflow.</p>
+            <div class="feature-list">
+              <span><ion-icon name="checkmark-circle"></ion-icon>Claude flags teachable moments with FAR/AIM citations and classic decision traps</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Student and aircraft profiles with separate minimums</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Share briefings with CFI notes by email or text</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cfi">
+      <div class="container cfi-command">
+        <div class="cfi-copy">
+          <p class="eyebrow">For flight instructors</p>
+          <h2>Brief every student, share the lesson, then watch the flight.</h2>
+          <p class="lead">PilotBriefAI gives CFIs a dedicated instructor workflow: manage student profiles, attach the aircraft they actually fly, build a briefing with Claude-generated teaching notes, send it by email or text, and keep eyes on the lesson with live ADS-B tracking.</p>
+          <div class="grid two cfi-capabilities">
+            <article class="panel cfi-mini">
+              <div class="icon-tile"><ion-icon name="people"></ion-icon></div>
+              <h3>Student roster</h3>
+              <p>Keep each student's certificate level, currency, personal minimums, and training focus separate so every briefing matches the pilot in the left seat.</p>
+            </article>
+            <article class="panel cfi-mini">
+              <div class="icon-tile"><ion-icon name="airplane"></ion-icon></div>
+              <h3>Fleet management</h3>
+              <p>Assign aircraft profiles by tail, type, crosswind limit, equipment, and performance assumptions so the same route is judged against the right airplane.</p>
+            </article>
+            <article class="panel cfi-mini">
+              <div class="icon-tile"><ion-icon name="reader"></ion-icon></div>
+              <h3>Teaching briefings</h3>
+              <p>Use Claude to surface VFR, IFR, runway, weather, and risk-management teaching points with FAR/AIM citations and space for your own CFI notes.</p>
+            </article>
+            <article class="panel cfi-mini">
+              <div class="icon-tile"><ion-icon name="send"></ion-icon></div>
+              <h3>Send and monitor</h3>
+              <p>Send the student a polished briefing by email or text, then follow their aircraft in the app with live ADS-B tracking on a sectional map.</p>
+            </article>
+          </div>
+          <div class="cfi-flow" aria-label="CFI workflow">
+            <span><ion-icon name="person-add"></ion-icon>Student</span>
+            <i></i>
+            <span><ion-icon name="airplane"></ion-icon>Aircraft</span>
+            <i></i>
+            <span><ion-icon name="clipboard"></ion-icon>Brief</span>
+            <i></i>
+            <span><ion-icon name="mail"></ion-icon>Share</span>
+            <i></i>
+            <span><ion-icon name="radio"></ion-icon>Track</span>
+          </div>
+        </div>
+
+        <div class="cfi-visual" aria-label="PilotBriefAI CFI teaching notes and send briefing preview">
+          <div class="cfi-screen teaching">
+            <img src="assets/screenshots/cfi-teaching-notes.png" alt="PilotBriefAI CFI teaching notes with FAR/AIM citations">
+          </div>
+          <div class="cfi-screen sending">
+            <img src="assets/screenshots/cfi-send-briefing.png" alt="PilotBriefAI send briefing to student with selectable teaching notes">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Three tools. One app. No one else has all three.</p>
+          <h2>AI briefings, live ATC, and live ADS-B — together.</h2>
+          <p class="lead">Plenty of apps do one of these. PilotBriefAI puts an AI weather briefer, real-time tower/ground/CTAF audio, and live aircraft tracking on a VFR sectional in one cockpit-grade workflow.</p>
+        </div>
+        <div class="grid three">
+          <article class="panel combo-card">
+            <div><div class="icon-tile"><ion-icon name="sparkles"></ion-icon></div><h3>AI-synthesized briefings</h3><p>Claude turns live FAA/NOAA data into a Go / Marginal / No-Go judged against your minimums, not a wall of decoded strings.</p></div>
+            <div class="product-visual combo-visual phone-frame"><img src="assets/screenshots/ai-flight-summary.png" alt="PilotBriefAI AI flight summary with marginal verdict"></div>
+          </article>
+          <article class="panel combo-card">
+            <div><div class="icon-tile"><ion-icon name="radio"></ion-icon></div><h3>Live ATC audio</h3><p>Stream tower, ground, and CTAF from LiveATC.net in the briefing flow so you hear the field before you key the mic.</p></div>
+            <div class="product-visual combo-visual atc-visual">
+              <img class="chip-shot" src="assets/screenshots/atc-chip.png" alt="PilotBriefAI live tower frequency chip">
+              <img class="panel-shot" src="assets/screenshots/atc-feeds.png" alt="PilotBriefAI KAUS ATC feed list">
+            </div>
+          </article>
+          <article class="panel combo-card">
+            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B tracking</h3><p>Watch traffic, including your own tail, move across a VFR sectional with frequent position updates.</p></div>
+            <div class="product-visual combo-visual live-track-panel"><img src="assets/screenshots/live-track-cropped.jpg" alt="PilotBriefAI live ADS-B tracking on a sectional chart"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="pireps">
+      <div class="container route-showcase center">
+        <div>
+          <p class="eyebrow">PIREPs along your route</p>
+          <h2>Every pilot report on your path — plotted, explained, and relevant.</h2>
+          <p class="lead">Most apps dump every PIREP filed within 200 miles into a list and leave the sorting to you. PilotBriefAI filters to your actual flight corridor, plots each report on the route map by severity, and lets you tap any dot to read the raw report — or ask Claude to explain what it means for your altitude, your aircraft, and your route right now. A turbulence report 80 miles off course at the wrong altitude isn't your problem. The MOD icing at your cruise altitude 15 miles west absolutely is.</p>
+          <div class="route-notes">
+            <div>
+              <span class="note-number">01</span>
+              <strong>Corridor-scoped, not region-wide</strong>
+              <p>Only reports that fall near your actual flight path are shown. Lateral distance and offset from route displayed for every dot — so you instantly know what's relevant.</p>
+            </div>
+            <div>
+              <span class="note-number">02</span>
+              <strong>Tap any dot — Claude explains it</strong>
+              <p>One tap shows the raw PIREP. One more gets you plain-English AI: what was reported, at what altitude, how far off your route, and whether it's a factor for the flight you're actually planning.</p>
+            </div>
+          </div>
+        </div>
+        <div class="product-visual pirep-visual">
+          <img src="assets/screenshots/pireps-route.png" alt="PilotBriefAI in-app PIREP list showing reports along the route with severity, distance, and altitude">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="alternates">
+      <div class="container route-showcase">
+        <div class="product-visual combo-visual single alt-panel"><img src="assets/screenshots/alternate-analysis.png" alt="PilotBriefAI AI alternate analysis with selected alternate and fuel budget"></div>
+        <div>
+          <p class="eyebrow">IFR alternate intelligence</p>
+          <h2>When an alternate is required, Claude explains your best out.</h2>
+          <p class="lead">PilotBriefAI does more than flag the 1-2-3 rule. It evaluates forecast ceiling and visibility, fuel budget, distance, approach type, and alternate minimums, then explains why the selected airport is or is not a practical out.</p>
+          <div class="insight-rail">
+            <div><strong>Legal and practical</strong><p>Alternate requirements are checked against forecast arrival windows, non-precision minima, visibility thresholds, and fuel available.</p></div>
+            <div><strong>Ranked by flyability</strong><p>Claude compares candidates so pilots see the nearest legal option, the weather risk, and the reason behind the recommendation.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ai">
+      <div class="container route-showcase">
+        <div class="sectional" aria-label="Sectional chart inspired route analysis">
+          <div class="wind-rose"><span>RWY 36</span></div>
+        </div>
+        <div>
+          <p class="eyebrow">Powered by Claude</p>
+          <h2>Credible AI for pilots who read the raw data.</h2>
+          <p class="lead">Claude reads live FAA, NOAA, and aviationweather.gov data fetched server-side, including PIREPs along your route, then cross-references that data against your personal minimums and aircraft profile.</p>
+          <div class="ai-stack">
+            <div class="ai-step"><b>01</b><div><h3>Live aviation data</h3><p>METARs, TAFs, NOTAMs, SIGMETs, AIRMETs, TFRs, route PIREPs, and winds aloft.</p></div></div>
+            <div class="ai-step"><b>02</b><div><h3>Your numbers</h3><p>Certificate level, ceiling, visibility, wind, icing preferences, aircraft crosswind limit, and route plan.</p></div></div>
+            <div class="ai-step"><b>03</b><div><h3>PAVE verdict</h3><p>A plain-English Pilot, Aircraft, enVironment, and External pressures analysis with a Go / Marginal / No-Go result.</p></div></div>
+          </div>
+          <div class="insight-rail compact">
+            <div><strong>Reasons against your exact numbers</strong><p>Claude weighs ceiling, visibility, wind, crosswind, icing, and density altitude against your minimums and aircraft.</p></div>
+            <div><strong>Hazards scoped to your corridor</strong><p>SIGMETs, AIRMETs, TFRs, and PIREPs are checked against your route, not a giant region.</p></div>
+            <div><strong>NOTAMs read like a human would</strong><p>NOTAMs are paginated from FAA sources and classified before Claude summarizes them.</p></div>
+            <div><strong>A verdict engineered not to fail silently</strong><p>The go/no-go path is designed with salvage-and-retry behavior for safety-critical output.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why PilotBriefAI is different</p>
+          <h2>Decision support, not a data dump.</h2>
+        </div>
+        <div class="grid four">
+          <article class="panel"><h3>Your minimums matter</h3><p>Every briefing is judged against your certificate level, preferences, weather limits, and aircraft profile.</p></article>
+          <article class="panel"><h3>It complements your EFB</h3><p>Use PilotBriefAI before your EFB: interpret the weather, decide Go / Marginal / No-Go, then file and navigate in ForeFlight or Garmin Pilot.</p></article>
+          <article class="panel"><h3>Four tools in one cockpit</h3><p>AI weather synthesis, route PIREPs, live ATC audio, and live ADS-B on sectionals in a single app.</p></article>
+          <article class="panel"><h3>Honest about its role</h3><p>A situational-awareness aid that makes you sharper. The go/no-go is always yours.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Annual-led pricing</p>
+          <h2>Start in the app. Upgrade when the airplane gets serious.</h2>
+          <p class="lead">The website does not sell subscriptions directly. Download PilotBriefAI, activate the 14-day trial in the app, then choose a plan through the App Store or Google Play when you are ready.</p>
+        </div>
+        <div class="grid four">
+          <article class="panel pricing-card" style="--tier: var(--free);">
+            <span class="badge">Free</span>
+            <h3>Try a real briefing</h3>
+            <div class="price">Free</div>
+            <p>3 total briefings, single-airport mode, 3 favorite airports, 1 aircraft profile.</p>
+            <ul class="tier-features">
+              <li><ion-icon name="checkmark-circle"></ion-icon>Live METAR and Go/No-Go</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Personal minimums profile</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Animated Windy maps</li>
+            </ul>
+          </article>
+          <article class="panel pricing-card" style="--tier: var(--vfr-plan);">
+            <span class="badge">Save 33%</span>
+            <h3>VFR</h3>
+            <div class="price">$39.99<small>/yr</small></div>
+            <p>$3.33/mo billed annually. 30 briefings/mo, 10 routes, 10 favorites, 3 aircraft profiles.</p>
+            <ul class="tier-features">
+              <li><ion-icon name="checkmark-circle"></ion-icon>Multi-airport route briefing</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Crosswind and density altitude</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Route hazards, fuel, FBOs, ATC audio</li>
+            </ul>
+          </article>
+          <article class="panel pricing-card featured" style="--tier: var(--ifr-plan);">
+            <span class="badge">Best fit</span>
+            <h3>IFR</h3>
+            <div class="price">$59.99<small>/yr</small></div>
+            <p>$5.00/mo billed annually. Unlimited briefings, saved routes, favorites, and aircraft profiles.</p>
+            <ul class="tier-features">
+              <li><ion-icon name="checkmark-circle"></ion-icon>AI Alternate Advisor with fuel and minima analysis</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Winds aloft and altitude advisor</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>NBM forecast and terrain awareness</li>
+            </ul>
+          </article>
+          <article class="panel pricing-card" style="--tier: var(--cfi-plan);">
+            <span class="badge">Save 50%</span>
+            <h3>CFI</h3>
+            <div class="price">$119.99<small>/yr</small></div>
+            <p>$10.00/mo billed annually. Student profiles, fleet management, teaching callouts, briefing share, and priority support.</p>
+            <ul class="tier-features">
+              <li><ion-icon name="checkmark-circle"></ion-icon>FAR/AIM teaching callouts</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Student and aircraft management</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Email/text briefing share plus ADS-B watch</li>
+            </ul>
+          </article>
+        </div>
+        <div class="panel feature-matrix" aria-label="PilotBriefAI tier feature comparison">
+          <table>
+            <thead>
+              <tr><th>Feature</th><th>Free</th><th>VFR</th><th>IFR</th><th>CFI</th></tr>
+            </thead>
+            <tbody>
+              <tr class="group"><td colspan="5">Core</td></tr>
+              <tr><td>Live METAR and Go/No-Go analysis</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Personal minimums profile</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Animated weather maps powered by Windy</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Briefings included</td><td>3 total</td><td>30/mo</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Saved routes</td><td>0</td><td>10</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Favorite airports</td><td>3</td><td>10</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Aircraft profiles</td><td>1</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr class="group"><td colspan="5">VFR Planning and Safety Suite</td></tr>
+              <tr><td>AI multi-airport route briefing</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Crosswind component analysis</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Density altitude and performance</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>IMSAFE personal check</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>AI route hazard analysis</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Fuel and FBO availability on route</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Live ATC audio</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr class="group"><td colspan="5">IFR Planning Suite</td></tr>
+              <tr><td>AI Alternate Advisor with fuel budget and minima analysis</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>AI winds aloft and altitude advisor</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Hourly NBM point forecast</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>AI terrain awareness</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr class="group"><td colspan="5">CFI Instructor Toolkit</td></tr>
+              <tr><td>AI teaching callouts with FAR/AIM citations</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Student profiles</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td>Up to 5</td></tr>
+              <tr><td>Fleet aircraft management</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Email/text briefing share with CFI notes</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Live ADS-B student flight watch</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Briefing PDF export and share</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Early access and priority support</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="store-row" style="justify-content: center;" aria-label="Download PilotBriefAI">
+          <a class="store-badge" href="download/ios/index.html"><img src="assets/store/app-store.svg" alt="Download on the App Store"></a>
+          <a class="store-badge" href="download/android/index.html"><img src="assets/store/google-play.svg" alt="Get it on Google Play"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Pilot objections, answered</p>
+          <h2>Built to fit the way you already brief.</h2>
+        </div>
+        <div class="panel faq">
+          <details open>
+            <summary>Do I still need ForeFlight or Garmin Pilot?</summary>
+            <p>Yes, and keep them. PilotBriefAI does not do charts, plates, filing, or in-flight navigation. It is the pre-flight decision layer: synthesize the weather, check it against your minimums, get a clear go/no-go, then use your EFB to file and fly.</p>
+          </details>
+          <details>
+            <summary>What makes it different from a weather app?</summary>
+            <p>Weather apps and EFBs show conditions. PilotBriefAI uses Claude to interpret those conditions against your personal minimums and aircraft, then adds route PIREPs, live ATC audio, and live ADS-B tracking.</p>
+          </details>
+          <details>
+            <summary>Where does this fit with my EFB workflow?</summary>
+            <p>Use PilotBriefAI before you open the filing workflow: brief the route, review AI-interpreted hazards and PIREPs, decide Go / Marginal / No-Go, then take that decision into ForeFlight or Garmin Pilot for charts, filing, plates, and navigation.</p>
+          </details>
+          <details>
+            <summary>Which AI does it use?</summary>
+            <p>Anthropic's Claude. It reads live FAA/NOAA data server-side and produces the plain-English PAVE analysis and Go / Marginal / No-Go result.</p>
+          </details>
+          <details>
+            <summary>Is this an official weather briefing?</summary>
+            <p>No. It is a situational-awareness aid. Always get an official briefing from an FAA-approved source such as 1800wxbrief.com. The go/no-go decision is always yours as PIC.</p>
+          </details>
+          <details>
+            <summary>How does the free trial work?</summary>
+            <p>14 days of full IFR-tier access, no credit card, one per pilot.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container">
+        <div class="panel safety">
+          <p class="eyebrow">Safety first</p>
+          <h2>Honest about its role.</h2>
+          <p><strong>PilotBriefAI is a situational-awareness aid, NOT a certified weather or flight-planning service.</strong> It does not replace an official preflight briefing from an FAA-approved source such as 1800wxbrief.com or Flight Service. PilotBriefAI does not make the go/no-go decision. Every decision, and the safe conduct of the flight, remains solely yours as pilot in command. Always verify critical information against official primary sources before flight.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/pilotbriefai-icon-192.png" alt="">
+          <span><small>AVI8AI</small>PilotBriefAI</span>
+        </a>
+        <p style="margin: 16px 0 0;">AI weather briefing for general aviation pilots. Built by AVI8AI.</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy/index.html">Privacy</a>
+        <a href="terms/index.html">Terms</a>
+        <a href="support/index.html">Support</a>
+        <a href="delete-account/index.html">Delete Account</a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
