@@ -293,40 +293,25 @@
         <div class="cfi-copy">
           <p class="eyebrow">For flight instructors</p>
           <h2>Brief every student, share the lesson, then watch the flight.</h2>
-          <p class="lead">PilotBriefAI gives CFIs a dedicated instructor workflow: manage student profiles, attach the aircraft they actually fly, build a briefing with Claude-generated teaching notes, send it by email or text, and keep eyes on the lesson with live ADS-B tracking.</p>
-          <div class="grid two cfi-capabilities">
-            <article class="panel cfi-mini">
-              <div class="icon-tile"><ion-icon name="people"></ion-icon></div>
-              <h3>Student roster</h3>
-              <p>Keep each student's certificate level, currency, personal minimums, and training focus separate so every briefing matches the pilot in the left seat.</p>
-            </article>
-            <article class="panel cfi-mini">
-              <div class="icon-tile"><ion-icon name="airplane"></ion-icon></div>
-              <h3>Fleet management</h3>
-              <p>Assign aircraft profiles by tail, type, crosswind limit, equipment, and performance assumptions so the same route is judged against the right airplane.</p>
-            </article>
-            <article class="panel cfi-mini">
-              <div class="icon-tile"><ion-icon name="reader"></ion-icon></div>
-              <h3>Teaching briefings</h3>
-              <p>Use Claude to surface VFR, IFR, runway, weather, and risk-management teaching points with FAR/AIM citations and space for your own CFI notes.</p>
-            </article>
-            <article class="panel cfi-mini">
-              <div class="icon-tile"><ion-icon name="send"></ion-icon></div>
-              <h3>Send and monitor</h3>
-              <p>Send the student a polished briefing by email or text, then follow their aircraft in the app with live ADS-B tracking on a sectional map.</p>
-            </article>
-          </div>
-          <div class="cfi-flow" aria-label="CFI workflow">
-            <span><ion-icon name="person-add"></ion-icon>Student</span>
-            <i></i>
-            <span><ion-icon name="airplane"></ion-icon>Aircraft</span>
-            <i></i>
-            <span><ion-icon name="clipboard"></ion-icon>Brief</span>
-            <i></i>
-            <span><ion-icon name="mail"></ion-icon>Share</span>
-            <i></i>
-            <span><ion-icon name="radio"></ion-icon>Track</span>
-          </div>
+          <p class="lead">A dedicated CFI workflow built into the app — student profiles, fleet management, AI teaching notes, and live ADS-B monitoring in one place.</p>
+          <ul class="cfi-steps">
+            <li>
+              <span class="icon-tile cfi-icon"><ion-icon name="people"></ion-icon></span>
+              <div><strong>Student roster</strong><p>Certificate level, currency, personal minimums, and training focus kept separate for every student.</p></div>
+            </li>
+            <li>
+              <span class="icon-tile cfi-icon"><ion-icon name="airplane"></ion-icon></span>
+              <div><strong>Fleet management</strong><p>Aircraft profiles by tail, type, crosswind limit, and equipment — so every briefing uses the right airplane.</p></div>
+            </li>
+            <li>
+              <span class="icon-tile cfi-icon"><ion-icon name="reader"></ion-icon></span>
+              <div><strong>Teaching briefings</strong><p>Claude surfaces FAR/AIM-cited teaching points with space for your own CFI notes, shareable by email or text.</p></div>
+            </li>
+            <li>
+              <span class="icon-tile cfi-icon"><ion-icon name="radio"></ion-icon></span>
+              <div><strong>Send and monitor</strong><p>Send the briefing, then follow the student on live ADS-B as they fly.</p></div>
+            </li>
+          </ul>
         </div>
 
         <div class="cfi-visual" aria-label="PilotBriefAI CFI teaching notes and send briefing preview">
@@ -449,53 +434,77 @@
     <section class="section" id="pricing">
       <div class="container">
         <div class="section-head center">
-          <p class="eyebrow">Annual-led pricing</p>
+          <p class="eyebrow">Simple pricing</p>
           <h2>Start in the app. Upgrade when the airplane gets serious.</h2>
           <p class="lead">The website does not sell subscriptions directly. Download PilotBriefAI, activate the 14-day trial in the app, then choose a plan through the App Store or Google Play when you are ready.</p>
         </div>
-        <div class="grid four">
+
+        <div class="billing-toggle-row">
+          <div class="billing-toggle" id="billingToggle">
+            <button class="billing-btn active" data-billing="annual">Annual <span class="toggle-save">Save up to 50%</span></button>
+            <button class="billing-btn" data-billing="monthly">Monthly</button>
+          </div>
+        </div>
+
+        <div class="grid four pricing-grid" id="pricingGrid">
           <article class="panel pricing-card" style="--tier: var(--free);">
             <span class="badge">Free</span>
             <h3>Try a real briefing</h3>
             <div class="price">Free</div>
-            <p>3 total briefings, single-airport mode, 3 favorite airports, 1 aircraft profile.</p>
+            <p class="price-sub">3 briefings total. No credit card.</p>
             <ul class="tier-features">
-              <li><ion-icon name="checkmark-circle"></ion-icon>Live METAR and Go/No-Go</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Live METAR &amp; Go/No-Go</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Personal minimums profile</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Animated Windy maps</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>3 favorite airports · 1 aircraft</li>
             </ul>
           </article>
+
           <article class="panel pricing-card" style="--tier: var(--vfr-plan);">
-            <span class="badge">Save 33%</span>
+            <span class="badge annual-show">Save 33%</span>
+            <span class="badge monthly-show" style="display:none">VFR</span>
             <h3>VFR</h3>
-            <div class="price">$39.99<small>/yr</small></div>
-            <p>$3.33/mo billed annually. 30 briefings/mo, 10 routes, 10 favorites, 3 aircraft profiles.</p>
+            <div class="price annual-show">$39.99<small>/yr</small></div>
+            <div class="price monthly-show" style="display:none">$4.99<small>/mo</small></div>
+            <p class="price-sub annual-show">$3.33/mo · billed annually</p>
+            <p class="price-sub monthly-show" style="display:none">Or $39.99/yr — save 33%</p>
             <ul class="tier-features">
               <li><ion-icon name="checkmark-circle"></ion-icon>Multi-airport route briefing</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Crosswind and density altitude</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Route hazards, fuel, FBOs, ATC audio</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Crosswind &amp; density altitude</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Route hazards, fuel &amp; FBOs</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Live ATC audio</li>
             </ul>
           </article>
+
           <article class="panel pricing-card featured" style="--tier: var(--ifr-plan);">
-            <span class="badge">Best fit</span>
+            <span class="badge annual-show">Best fit</span>
+            <span class="badge monthly-show" style="display:none">Most popular</span>
             <h3>IFR</h3>
-            <div class="price">$59.99<small>/yr</small></div>
-            <p>$5.00/mo billed annually. Unlimited briefings, saved routes, favorites, and aircraft profiles.</p>
+            <div class="price annual-show">$59.99<small>/yr</small></div>
+            <div class="price monthly-show" style="display:none">$9.99<small>/mo</small></div>
+            <p class="price-sub annual-show">$5.00/mo · billed annually</p>
+            <p class="price-sub monthly-show" style="display:none">Or $59.99/yr — save 50%</p>
             <ul class="tier-features">
-              <li><ion-icon name="checkmark-circle"></ion-icon>AI Alternate Advisor with fuel and minima analysis</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Winds aloft and altitude advisor</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>NBM forecast and terrain awareness</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Everything in VFR</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>AI Alternate Advisor</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Winds aloft &amp; altitude advisor</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Unlimited briefings &amp; routes</li>
             </ul>
           </article>
+
           <article class="panel pricing-card" style="--tier: var(--cfi-plan);">
-            <span class="badge">Save 50%</span>
+            <span class="badge annual-show">Save 50%</span>
+            <span class="badge monthly-show" style="display:none">CFI</span>
             <h3>CFI</h3>
-            <div class="price">$119.99<small>/yr</small></div>
-            <p>$10.00/mo billed annually. Student profiles, fleet management, teaching callouts, briefing share, and priority support.</p>
+            <div class="price annual-show">$119.99<small>/yr</small></div>
+            <div class="price monthly-show" style="display:none">$19.99<small>/mo</small></div>
+            <p class="price-sub annual-show">$10.00/mo · billed annually</p>
+            <p class="price-sub monthly-show" style="display:none">Or $119.99/yr — save 50%</p>
             <ul class="tier-features">
+              <li><ion-icon name="checkmark-circle"></ion-icon>Everything in IFR</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>FAR/AIM teaching callouts</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Student and aircraft management</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Email/text briefing share plus ADS-B watch</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Student &amp; fleet management</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Briefing share &amp; ADS-B watch</li>
             </ul>
           </article>
         </div>
@@ -609,5 +618,22 @@
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.querySelectorAll('.billing-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var billing = this.dataset.billing;
+        document.querySelectorAll('.billing-btn').forEach(function(b) {
+          b.classList.toggle('active', b === btn);
+        });
+        var isMonthly = billing === 'monthly';
+        document.querySelectorAll('.annual-show').forEach(function(el) {
+          el.style.display = isMonthly ? 'none' : '';
+        });
+        document.querySelectorAll('.monthly-show').forEach(function(el) {
+          el.style.display = isMonthly ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>

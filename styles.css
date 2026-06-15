@@ -235,10 +235,7 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(6, 16, 31, 0.92), rgba(6, 16, 31, 0.58) 45%, rgba(6, 16, 31, 0.82)),
-    url("assets/avi8ai-logo-512.png") center right 8% / min(52vw, 680px) no-repeat;
-  opacity: 0.34;
+  background: linear-gradient(90deg, rgba(6, 16, 31, 0.92), rgba(6, 16, 31, 0.58) 45%, rgba(6, 16, 31, 0.82));
   pointer-events: none;
 }
 
@@ -463,10 +460,11 @@ h3 {
 }
 
 .metar-tile {
-  left: 18px;
+  left: 28%;
   right: auto;
-  bottom: 72px;
+  bottom: 20px;
   top: auto;
+  transform: translateX(-50%);
   width: min(300px, 72vw);
   padding: 0;
   overflow: hidden;
@@ -972,25 +970,57 @@ h3 {
   min-width: 0;
 }
 
-.cfi-capabilities {
-  margin-top: 26px;
+.cfi-steps {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
 }
 
-.cfi-mini {
-  min-height: 100%;
-}
-
-.cfi-mini .icon-tile {
-  margin-bottom: 14px;
-}
-
-.cfi-flow {
+.cfi-steps li {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  overflow-x: auto;
-  padding-bottom: 4px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(51, 65, 85, 0.45);
+}
+
+.cfi-steps li:last-child {
+  border-bottom: 1px solid rgba(51, 65, 85, 0.45);
+}
+
+.cfi-steps li > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.cfi-steps strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cfi-steps li p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+.icon-tile.cfi-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0;
+  margin-top: 2px;
+  border-color: rgba(167, 139, 250, 0.3);
+  background: rgba(167, 139, 250, 0.1);
+  color: var(--cfi-plan);
+}
+
+.icon-tile.cfi-icon ion-icon {
+  font-size: 1.1rem;
 }
 
 .cfi-flow span {
@@ -1272,18 +1302,17 @@ h3 {
 }
 
 .combo-card {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
-  height: 640px;
   background:
     radial-gradient(circle at 50% 76%, rgba(56, 189, 248, 0.14), transparent 16rem),
     linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(10, 19, 34, 0.96));
 }
 
 .combo-visual {
-  align-self: end;
-  min-height: 330px;
+  height: 400px;
+  flex-shrink: 0;
   padding: 22px;
   border-color: rgba(56, 189, 248, 0.14);
   background:
@@ -1307,6 +1336,7 @@ h3 {
 }
 
 .combo-visual.alt-panel {
+  height: auto;
   background: none;
   border: none;
   box-shadow: none;
@@ -1315,11 +1345,14 @@ h3 {
   align-self: stretch;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .combo-visual.alt-panel img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: none;
   object-fit: contain;
   filter: none;
   border-radius: 20px;
@@ -1331,15 +1364,15 @@ h3 {
   padding: 0;
   overflow: hidden;
   border-radius: 10px;
+  background: none;
 }
 
 .combo-visual.live-track-panel img {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: none;
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 52%;
 }
 
 .combo-visual.atc-visual {
@@ -1576,8 +1609,69 @@ h3 {
   margin-top: 18px;
 }
 
+.billing-toggle-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  gap: 4px;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 999px;
+  padding: 4px;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.billing-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 20px;
+  background: transparent;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+  white-space: nowrap;
+}
+
+.billing-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--text);
+}
+
+.toggle-save {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: rgba(74, 222, 128, 0.12);
+  color: var(--vfr);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pricing-grid .price-sub {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .pricing-card {
   padding-top: 28px;
+}
+
+.pricing-card .badge {
+  display: block;
+  margin-bottom: 12px;
 }
 
 .pricing-card::after {
@@ -1673,6 +1767,7 @@ h3 {
 
 .badge {
   display: inline-flex;
+  margin-bottom: 10px;
   border: 1px solid color-mix(in srgb, var(--tier, var(--accent)) 58%, transparent);
   border-radius: 999px;
   padding: 3px 9px;
