@@ -3,17 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PilotBriefAI | AI Preflight Intelligence for EFB Pilots</title>
-  <meta name="description" content="PilotBriefAI augments ForeFlight and Garmin Pilot with AI preflight briefings, personal-minimums Go / Marginal / No-Go analysis, route PIREPs, live ATC, and ADS-B tracking.">
-  <meta property="og:title" content="PilotBriefAI | AI preflight intelligence for EFB pilots">
-  <meta property="og:description" content="Brief smarter before you open your EFB. AI Go / Marginal / No-Go decisions, route PIREPs, live ATC, and ADS-B tracking.">
+  <title>PilotBriefAI | AI Aviation Weather Briefing App for Pilots</title>
+  <meta name="description" content="PilotBriefAI is an AI aviation weather briefing app for pilots with METAR/TAF analysis, Go/No-Go guidance, route PIREPs, live ATC, ADS-B tracking, and VFR sectional GPS.">
+  <meta name="theme-color" content="#06101f">
+  <meta property="og:title" content="PilotBriefAI | AI aviation weather briefings for pilots">
+  <meta property="og:description" content="Make smarter preflight go/no-go decisions with AI aviation weather briefings, METAR/TAF analysis, route PIREPs, live ATC, ADS-B tracking, and VFR sectional GPS.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avi8ai.com/">
   <meta property="og:image" content="https://avi8ai.com/assets/pilotbriefai-icon-512.png">
+  <meta property="og:site_name" content="PilotBriefAI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PilotBriefAI | AI Aviation Weather Briefing App for Pilots">
+  <meta name="twitter:description" content="AI pilot weather briefings with METAR/TAF analysis, personal-minimums Go/No-Go, route PIREPs, live ATC, ADS-B tracking, and VFR sectional GPS.">
+  <meta name="twitter:image" content="https://avi8ai.com/assets/pilotbriefai-icon-512.png">
   <link rel="canonical" href="https://avi8ai.com/">
   <link rel="icon" href="assets/pilotbriefai-icon-192.png">
   <link rel="apple-touch-icon" href="assets/pilotbriefai-icon-512.png">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://avi8ai.com/#organization",
+        "name": "AVI8AI",
+        "url": "https://avi8ai.com/",
+        "logo": "https://avi8ai.com/assets/pilotbriefai-icon-512.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://avi8ai.com/#website",
+        "url": "https://avi8ai.com/",
+        "name": "PilotBriefAI",
+        "publisher": { "@id": "https://avi8ai.com/#organization" },
+        "description": "AI aviation weather briefings, personal-minimums Go/No-Go decision support, route PIREPs, live ATC, ADS-B tracking, and VFR sectional GPS tools for pilots."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://avi8ai.com/#pilotbriefai",
+        "name": "PilotBriefAI",
+        "applicationCategory": "WeatherApplication",
+        "operatingSystem": "iOS, Android",
+        "url": "https://avi8ai.com/",
+        "image": "https://avi8ai.com/assets/pilotbriefai-icon-512.png",
+        "publisher": { "@id": "https://avi8ai.com/#organization" },
+        "description": "PilotBriefAI is an AI aviation weather briefing app for general aviation pilots. It helps pilots review METARs, TAFs, NOTAMs, PIREPs, winds aloft, personal minimums, live ATC audio, ADS-B traffic, and VFR sectional GPS context before using an EFB to file and fly.",
+        "featureList": [
+          "AI aviation weather briefings",
+          "METAR and TAF analysis",
+          "Personal-minimums Go / Marginal / No-Go guidance",
+          "Route PIREP mapping and interpretation",
+          "Live ATC audio",
+          "ADS-B flight tracking",
+          "VFR sectional GPS map with weather layers",
+          "Georeferenced navigation in FLY mode",
+          "IFR alternate advisor",
+          "CFI briefing share and student flight watch"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "14-day free trial with paid subscription tiers available in app."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://avi8ai.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I still need ForeFlight or Garmin Pilot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PilotBriefAI does not replace charts, plates, or filing, but FLY mode now includes georeferenced VFR sectional GPS navigation. Use PilotBriefAI to brief, decide, monitor, and navigate with FLY, then use your EFB where you still need filing, plates, and full chart workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes PilotBriefAI different from a weather app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Weather apps and EFBs show conditions. PilotBriefAI uses Claude to interpret those conditions against your personal minimums and aircraft, then adds route PIREPs, live ATC audio, and live ADS-B tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does PilotBriefAI fit with my EFB workflow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use PilotBriefAI before you open the filing workflow: brief the route, review AI-interpreted hazards and PIREPs, decide Go / Marginal / No-Go, then take that decision into ForeFlight or Garmin Pilot for charts, filing, plates, and navigation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PilotBriefAI an official weather briefing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. PilotBriefAI is a situational-awareness aid. Always get an official briefing from an FAA-approved source such as 1800wxbrief.com. The go/no-go decision is always yours as pilot in command."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -44,10 +139,10 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span>AI preflight intelligence</p>
+          <p class="eyebrow"><span class="status-dot"></span>AI aviation weather briefing app</p>
           <h1>Brief smarter before you open your EFB.</h1>
-          <p class="lead">ForeFlight and Garmin Pilot are built for charts, plates, filing, and navigation. PilotBriefAI is built for the decision before that: Claude reads live aviation data, checks it against your personal minimums and aircraft, then gives you a plain-English Go / Marginal / No-Go briefing.</p>
-          <p class="hero-kicker">AI weather synthesis, route PIREPs, live ATC audio, live ADS-B tracking, and FLY sectional GPS in one app. Fully featured for 14 days, no credit card.</p>
+          <p class="lead">ForeFlight and Garmin Pilot are built for charts, plates, filing, and navigation. PilotBriefAI is built for the preflight decision before that: Claude reads live aviation weather, METARs, TAFs, PIREPs, NOTAMs, winds aloft, and airport conditions, checks them against your personal minimums and aircraft, then gives you a plain-English Go / Marginal / No-Go briefing.</p>
+          <p class="hero-kicker">AI pilot weather briefings, route PIREPs, live ATC audio, live ADS-B tracking, and FLY sectional GPS in one app. Fully featured for 14 days, no credit card.</p>
           <div class="hero-actions">
             <a class="btn ghost" href="#decision"><ion-icon name="shield-checkmark"></ion-icon>See the Go/No-Go flow</a>
           </div>
@@ -75,9 +170,9 @@
     <section class="section" id="dashboard">
       <div class="container dashboard-spotlight">
         <div>
-          <p class="eyebrow">Your daily cockpit view</p>
-          <h2>The screen pilots come back to before every flight.</h2>
-          <p class="lead">PilotBriefAI opens on the airport picture that matters most: your watched field, favorite ATIS frequencies, live METAR category, runway wind, sunset/night timing, nearby advisories, and one-tap access to the full AI briefing.</p>
+          <p class="eyebrow">Pilot weather dashboard</p>
+          <h2>The aviation weather screen pilots come back to before every flight.</h2>
+          <p class="lead">PilotBriefAI opens on the airport picture that matters most: your watched field, favorite ATIS frequencies, live METAR category, runway wind, ceiling, visibility, sunset/night timing, nearby advisories, and one-tap access to the full AI flight briefing.</p>
           <div class="dashboard-points">
             <div class="dashboard-point">
               <span class="dash-icon"><ion-icon name="radio"></ion-icon></span>
@@ -103,8 +198,8 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Works with what you already fly</p>
-          <h2>The pre-flight decision layer your EFB is missing.</h2>
-          <p class="lead">ForeFlight and Garmin Pilot are brilliant at charts, plates, filing, and navigation. None of them tell you, in plain English and judged against your minimums, whether today is a go. That's the gap PilotBriefAI fills.</p>
+          <h2>The preflight weather briefing layer your EFB is missing.</h2>
+          <p class="lead">ForeFlight and Garmin Pilot are brilliant at charts, plates, filing, and navigation. None of them give you an AI aviation weather briefing, in plain English and judged against your personal minimums, that explains whether today is a go. That's the gap PilotBriefAI fills.</p>
         </div>
         <div class="grid three workflow">
           <article class="panel">
@@ -130,8 +225,9 @@
             </thead>
             <tbody>
               <tr><td>Live METAR / TAF / NOTAM data</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
-              <tr><td>Charts, plates, filing, georeferenced navigation</td><td class="no">No</td><td class="yes">Yes</td><td class="no">No, by design</td></tr>
-              <tr><td>AI Go / Marginal / No-Go judged against your personal minimums</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
+              <tr><td>Charts, plates, and filing</td><td class="no">No</td><td class="yes">Yes</td><td class="no">No, by design</td></tr>
+              <tr><td>Georeferenced VFR sectional GPS navigation</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>AI pilot weather briefing with Go / Marginal / No-Go judged against your personal minimums</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
               <tr><td>Plain-English PAVE risk synthesis</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
               <tr><td>Route PIREPs mapped and interpreted by AI</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>Live ATC audio in the briefing flow</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
@@ -147,7 +243,7 @@
       <div class="container">
         <div class="section-head center">
           <p class="eyebrow">Complete preflight briefing</p>
-          <h2>Every section. Labeled when Claude is doing the work.</h2>
+          <h2>Every aviation weather briefing section. Labeled when Claude is doing the work.</h2>
           <p class="lead">PilotBriefAI pulls from 8+ live FAA/NOAA sources. Most sections show raw data exactly as received. The AI sections are where Claude reads everything together and writes the judgment.</p>
         </div>
 
@@ -183,7 +279,7 @@
           <div class="panel brief-group">
             <div class="boi-badge live"><ion-icon name="radio-outline"></ion-icon>Live tools</div>
             <h3>Live Cockpit Tools</h3>
-            <p>Real-time audio and traffic built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
+            <p>Live ATC audio, ADS-B traffic, and VFR sectional GPS context built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
             <ul class="brief-feat">
               <li><ion-icon name="chevron-forward"></ion-icon>Live ATC Audio</li>
               <li><ion-icon name="chevron-forward"></ion-icon>FLY sectional GPS + ADS-B traffic</li>
@@ -200,7 +296,7 @@
             </div>
             <div class="verdict-bar">MARGINAL</div>
             <span class="ai-badge"><ion-icon name="sparkles"></ion-icon>Powered by Claude</span>
-            <h2>It evaluates you, not just the weather.</h2>
+          <h2>It evaluates your pilot weather minimums, not just the weather.</h2>
             <p class="lead">Raw weather tools show conditions. PilotBriefAI checks those conditions against your personal minimums, certificate level, aircraft profile, and route context, then explains the risk in pilot language.</p>
             <div class="metrics">
               <div class="mini-metric"><span class="metric-label">Ceiling</span><b>2,500 ft</b></div>
@@ -322,8 +418,8 @@
       <div class="container">
         <div class="section-head center">
           <p class="eyebrow">Three tools. One app. No one else has all three.</p>
-          <h2>AI briefings, live ATC, and live ADS-B — together.</h2>
-          <p class="lead">Plenty of apps do one of these. PilotBriefAI puts an AI weather briefer, real-time tower/ground/CTAF audio, and live aircraft tracking on a VFR sectional in one cockpit-grade workflow.</p>
+          <h2>AI flight briefings, live ATC, and live ADS-B — together.</h2>
+          <p class="lead">Plenty of apps do one of these. PilotBriefAI puts an AI aviation weather briefer, real-time tower/ground/CTAF audio, and live aircraft tracking on a VFR sectional in one cockpit-grade workflow.</p>
         </div>
         <div class="grid three">
           <article class="panel combo-card">
@@ -411,7 +507,7 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Why PilotBriefAI is different</p>
-          <h2>Decision support, not a data dump.</h2>
+          <h2>Pilot weather decision support, not a data dump.</h2>
         </div>
         <div class="grid four">
           <article class="panel"><h3>Your minimums matter</h3><p>Every briefing is judged against your certificate level, preferences, weather limits, and aircraft profile.</p></article>
@@ -544,12 +640,12 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Pilot objections, answered</p>
-          <h2>Built to fit the way you already brief.</h2>
+          <h2>Built to fit the way pilots already brief weather.</h2>
         </div>
         <div class="panel faq">
           <details open>
             <summary>Do I still need ForeFlight or Garmin Pilot?</summary>
-            <p>Yes, and keep them. PilotBriefAI does not do charts, plates, filing, or in-flight navigation. It is the pre-flight decision layer: synthesize the weather, check it against your minimums, get a clear go/no-go, then use your EFB to file and fly.</p>
+            <p>Yes, and keep them. PilotBriefAI does not replace charts, plates, or filing, but FLY mode now includes georeferenced VFR sectional GPS navigation. Use PilotBriefAI to brief, decide, monitor, and navigate with FLY, then use your EFB where you still need filing, plates, and full chart workflows.</p>
           </details>
           <details>
             <summary>What makes it different from a weather app?</summary>
@@ -597,6 +693,10 @@
         <p class="footer-safety">PilotBriefAI is a situational-awareness aid, not a certified weather or flight-planning service. Always verify safety-critical information with official FAA-approved sources before flight.</p>
       </div>
       <div class="footer-links">
+        <a href="index.html#decision">AI Weather Briefing</a>
+        <a href="index.html#features">Pilot Briefing Features</a>
+        <a href="index.html#pireps">Route PIREPs</a>
+        <a href="index.html#pricing">Pricing</a>
         <a href="privacy/index.html">Privacy</a>
         <a href="terms/index.html">Terms</a>
         <a href="support/index.html">Support</a>

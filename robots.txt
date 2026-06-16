@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avi8ai.com/sitemap.xml
