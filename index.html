@@ -29,7 +29,14 @@
         <a href="#pricing">Pricing</a>
         <a href="support/index.html">Support</a>
       </nav>
-      <a class="btn primary nav-cta" href="#download">Start free trial</a>
+      <div class="nav-store" id="download" aria-label="Download PilotBriefAI">
+        <a class="store-badge" href="download/ios/index.html" aria-label="Download PilotBriefAI on the App Store">
+          <img src="assets/store/app-store.svg" alt="Download on the App Store">
+        </a>
+        <a class="store-badge" href="download/android/index.html" aria-label="Get PilotBriefAI on Google Play">
+          <img src="assets/store/google-play.svg" alt="Get it on Google Play">
+        </a>
+      </div>
     </div>
   </header>
 
@@ -40,15 +47,7 @@
           <p class="eyebrow"><span class="status-dot"></span>AI preflight intelligence</p>
           <h1>Brief smarter before you open your EFB.</h1>
           <p class="lead">ForeFlight and Garmin Pilot are built for charts, plates, filing, and navigation. PilotBriefAI is built for the decision before that: Claude reads live aviation data, checks it against your personal minimums and aircraft, then gives you a plain-English Go / Marginal / No-Go briefing.</p>
-          <div class="store-row hero-store" id="download" aria-label="Download PilotBriefAI">
-            <a class="store-badge" href="download/ios/index.html" aria-label="Download PilotBriefAI on the App Store">
-              <img src="assets/store/app-store.svg" alt="Download on the App Store">
-            </a>
-            <a class="store-badge" href="download/android/index.html" aria-label="Get PilotBriefAI on Google Play">
-              <img src="assets/store/google-play.svg" alt="Get it on Google Play">
-            </a>
-          </div>
-          <p class="hero-kicker">AI weather synthesis, route PIREPs, live ATC audio, and live ADS-B tracking in one app. Fully featured for 14 days, no credit card.</p>
+          <p class="hero-kicker">AI weather synthesis, route PIREPs, live ATC audio, live ADS-B tracking, and FLY sectional GPS in one app. Fully featured for 14 days, no credit card.</p>
           <div class="hero-actions">
             <a class="btn ghost" href="#decision"><ion-icon name="shield-checkmark"></ion-icon>See the Go/No-Go flow</a>
           </div>
@@ -67,30 +66,11 @@
         </div>
 
         <div class="flight-deck" aria-label="PilotBriefAI app preview">
-          <div class="phone left"><img src="assets/screenshots/live-track.jpg" alt="PilotBriefAI live sectional tracking screen"></div>
-          <div class="phone main"><img src="assets/screenshots/briefing.jpg" alt="PilotBriefAI briefing screen with marginal risk analysis"></div>
-          <div class="phone right"><img src="assets/screenshots/dashboard.jpg" alt="PilotBriefAI dashboard METAR screen"></div>
-          <div class="deck-card metar-tile" aria-hidden="true">
-            <img src="assets/windy.png" alt="PilotBriefAI live METAR card with satellite imagery, runway wind rose, animated Windy.com weather map, and hour-by-hour forecast">
-            <div class="metar-windy-bar">
-              <span class="metar-windy-label"><ion-icon name="map-outline"></ion-icon> Animated Weather Map</span>
-              <span class="windy-brand">Windy.com</span>
-            </div>
-          </div>
+          <div class="phone left"><img src="assets/KEEPER3-transparent.png" alt="PilotBriefAI marginal briefing screen with AI flight summary"></div>
+          <div class="phone main"><img src="assets/KEEPER1-transparent.png" alt="PilotBriefAI dashboard with watched airport, METAR, runway wind, and forecast"></div>
         </div>
       </div>
     </section>
-
-    <section class="trial-band" aria-label="PilotBriefAI free trial">
-      <div class="container">
-        <div>
-          <p class="eyebrow">14-day free trial</p>
-          <h2>Start your 14-day free trial — full IFR features, no credit card.</h2>
-          <p>Every authenticated pilot gets one app-granted trial with full IFR-tier access: multi-airport route briefings, alternate advisor, winds aloft, route hazards, PIREPs, and unlimited briefings during the trial window.</p>
-        </div>
-      </div>
-    </section>
-
 
     <section class="section" id="dashboard">
       <div class="container dashboard-spotlight">
@@ -155,7 +135,7 @@
               <tr><td>Plain-English PAVE risk synthesis</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
               <tr><td>Route PIREPs mapped and interpreted by AI</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>Live ATC audio in the briefing flow</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
-              <tr><td>Live ADS-B tracking on VFR sectionals</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
+              <tr><td>FLY sectional map with GPS, METARs, weather layers, and ADS-B traffic</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>Role in your workflow</td><td>Source data</td><td>File and fly</td><td>Brief, decide, then use your EFB</td></tr>
             </tbody>
           </table>
@@ -206,7 +186,7 @@
             <p>Real-time audio and traffic built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
             <ul class="brief-feat">
               <li><ion-icon name="chevron-forward"></ion-icon>Live ATC Audio</li>
-              <li><ion-icon name="chevron-forward"></ion-icon>ADS-B Traffic Tracking</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>FLY sectional GPS + ADS-B traffic</li>
               <li><ion-icon name="chevron-forward"></ion-icon>Animated Weather Maps <span class="windy-inline">Windy.com</span></li>
             </ul>
           </div>
@@ -358,8 +338,8 @@
             </div>
           </article>
           <article class="panel combo-card">
-            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B tracking</h3><p>Watch traffic, including your own tail, move across a VFR sectional with frequent position updates.</p></div>
-            <div class="product-visual combo-visual live-track-panel"><img src="assets/screenshots/live-track-cropped.jpg" alt="PilotBriefAI live ADS-B tracking on a sectional chart"></div>
+            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B + FLY sectional</h3><p>Use FLY as a VFR sectional map with GPS positioning, METAR stations, weather overlays, ADS-B traffic, route lines, and more.</p></div>
+            <div class="product-visual combo-visual live-track-panel fly-map-panel"><img src="assets/KEEPER6-transparent.png" alt="PilotBriefAI FLY sectional map with GPS positioning, weather layers, METAR stations, and ADS-B traffic"></div>
           </article>
         </div>
       </div>
@@ -551,7 +531,7 @@
               <tr><td>Student profiles</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td>Up to 5</td></tr>
               <tr><td>Fleet aircraft management</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>Email/text briefing share with CFI notes</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
-              <tr><td>Live ADS-B student flight watch</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>FLY map and live ADS-B student flight watch</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>Briefing PDF export and share</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>Early access and priority support</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
             </tbody>
