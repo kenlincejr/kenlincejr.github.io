@@ -1289,6 +1289,7 @@ h3 {
 .pirep-media {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .pirep-panel {
@@ -1327,11 +1328,13 @@ h3 {
 
 .pirep-phone-panel {
   align-self: center;
+  width: min(390px, 100%);
   border-radius: 24px;
   background: transparent;
 }
 
 .pirep-phone-panel img {
+  display: block;
   border-radius: 23px;
 }
 
