@@ -23,13 +23,13 @@
         <span><small>AVI8AI</small>PilotBriefAI</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#efb">EFB Layer</a>
         <a href="#features">Features</a>
-        <a href="#cfi">CFIs</a>
+        <a href="#pireps">Route PIREPs</a>
         <a href="#ai">Claude AI</a>
         <a href="#pricing">Pricing</a>
         <a href="support/index.html">Support</a>
       </nav>
+      <a class="btn primary nav-cta" href="#download">Start free trial</a>
     </div>
   </header>
 
@@ -77,6 +77,20 @@
               <span class="windy-brand">Windy.com</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trial-band" aria-label="PilotBriefAI free trial">
+      <div class="container">
+        <div>
+          <p class="eyebrow">14-day free trial</p>
+          <h2>Start your 14-day free trial — full IFR features, no credit card.</h2>
+          <p>Every authenticated pilot gets one app-granted trial with full IFR-tier access: multi-airport route briefings, alternate advisor, winds aloft, route hazards, PIREPs, and unlimited briefings during the trial window.</p>
+        </div>
+        <div class="store-row" aria-label="Download PilotBriefAI">
+          <a class="store-badge" href="download/ios/index.html" aria-label="Download PilotBriefAI on the App Store"><img src="assets/store/app-store.svg" alt="Download on the App Store"></a>
+          <a class="store-badge" href="download/android/index.html" aria-label="Get PilotBriefAI on Google Play"><img src="assets/store/google-play.svg" alt="Get it on Google Play"></a>
         </div>
       </div>
     </section>
@@ -355,27 +369,47 @@
       </div>
     </section>
 
-    <section class="section alt" id="pireps">
-      <div class="container route-showcase center">
-        <div>
+    <section class="section alt pirep-section" id="pireps">
+      <div class="container pirep-showcase">
+        <div class="pirep-copy">
           <p class="eyebrow">PIREPs along your route</p>
-          <h2>Every pilot report on your path — plotted, explained, and relevant.</h2>
-          <p class="lead">Most apps dump every PIREP filed within 200 miles into a list and leave the sorting to you. PilotBriefAI filters to your actual flight corridor, plots each report on the route map by severity, and lets you tap any dot to read the raw report — or ask Claude to explain what it means for your altitude, your aircraft, and your route right now. A turbulence report 80 miles off course at the wrong altitude isn't your problem. The MOD icing at your cruise altitude 15 miles west absolutely is.</p>
-          <div class="route-notes">
+          <h2>Every pilot report on your path.<br>Plotted. Explained. Relevant.</h2>
+          <p class="lead">Most weather apps dump every PIREP filed in a 200-mile radius into a list and let you sort it out. PilotBriefAI does something different: it maps only the reports that fall near your actual flight corridor — then lets you tap any dot to read the raw report, or ask Claude to explain what it means for your route, your altitude, and your aircraft right now.</p>
+          <p class="lead">Turbulence at FL170 fifty miles north of your corridor at the wrong altitude isn't your problem. The MOD icing report 12 miles west at your cruise altitude absolutely is. We show you the difference.</p>
+          <div class="pirep-legend" aria-label="PIREP severity legend">
+            <span><i class="sev"></i>SEV/EXTRM</span>
+            <span><i class="mod"></i>MOD</span>
+            <span><i class="lght"></i>LGHT</span>
+            <span><i class="icing"></i>Icing</span>
+            <span><i class="neg"></i>NEG</span>
+          </div>
+          <div class="route-notes pirep-notes">
             <div>
-              <span class="note-number">01</span>
+              <span class="icon-tile"><ion-icon name="navigate"></ion-icon></span>
               <strong>Corridor-scoped, not region-wide</strong>
-              <p>Only reports that fall near your actual flight path are shown. Lateral distance and offset from route displayed for every dot — so you instantly know what's relevant.</p>
+              <p>Reports are filtered to your specific flight path. Distance and lateral offset shown for every dot.</p>
             </div>
             <div>
-              <span class="note-number">02</span>
+              <span class="icon-tile"><ion-icon name="alert-circle"></ion-icon></span>
+              <strong>Color-coded by severity</strong>
+              <p>SEV/EXTRM red, MOD orange, LGHT yellow, Icing blue, NEG green. Know the serious ones at a glance.</p>
+            </div>
+            <div>
+              <span class="icon-tile"><ion-icon name="sparkles"></ion-icon></span>
               <strong>Tap any dot — Claude explains it</strong>
-              <p>One tap shows the raw PIREP. One more gets you plain-English AI: what was reported, at what altitude, how far off your route, and whether it's a factor for the flight you're actually planning.</p>
+              <p>Raw PIREP text is one tap away. Ask for AI interpretation and get plain English: what was reported, at what altitude, how far off your route, and whether it's a factor for your flight.</p>
             </div>
           </div>
+          <div class="pirep-quote">"1 turbulence · 1 icing on route — tap any dot to see the raw report"<span>Live in-app caption after route briefings</span></div>
         </div>
-        <div class="product-visual pirep-visual">
-          <img src="assets/screenshots/pireps-route.png" alt="PilotBriefAI in-app PIREP list showing reports along the route with severity, distance, and altitude">
+        <div class="pirep-media" aria-label="PilotBriefAI PIREP route screenshots">
+          <figure class="pirep-panel pirep-panel-large">
+            <img src="assets/screenshots/pireps-composite.png" alt="PilotBriefAI route PIREPs with radar imagery and Claude interpretation">
+            <figcaption>Route PIREPs + radar imagery + Claude interpretation</figcaption>
+          </figure>
+          <figure class="pirep-panel pirep-phone-panel">
+            <img src="assets/screenshots/pireps-route.png" alt="PilotBriefAI phone screen showing route PIREP map, severity legend, and expandable report list">
+          </figure>
         </div>
       </div>
     </section>
@@ -596,7 +630,7 @@
         <div class="panel safety">
           <p class="eyebrow">Safety first</p>
           <h2>Honest about its role.</h2>
-          <p><strong>PilotBriefAI is a situational-awareness aid, NOT a certified weather or flight-planning service.</strong> It does not replace an official preflight briefing from an FAA-approved source such as 1800wxbrief.com or Flight Service. PilotBriefAI does not make the go/no-go decision. Every decision, and the safe conduct of the flight, remains solely yours as pilot in command. Always verify critical information against official primary sources before flight.</p>
+          <p><strong>PilotBriefAI is a situational-awareness aid, NOT a certified weather or flight-planning service.</strong> It does not replace an official preflight briefing from an FAA-approved source such as 1800wxbrief.com or Flight Service, and must never be used as your sole source of weather, NOTAM, or flight-planning information. PilotBriefAI does not make the go/no-go decision — it surfaces how live data compares to your personal minimums, in plain English. Every decision, and the safe conduct of the flight, remains solely yours as pilot in command. Weather, NOTAM, TFR, PIREP, and winds-aloft data may be delayed, incomplete, unavailable, or inaccurate, and AI summaries can contain errors. Always verify all safety-critical information against official primary sources before flight, as required by 14 CFR 91.103. You assume all risk of using this app.</p>
         </div>
       </div>
     </section>
@@ -610,6 +644,7 @@
           <span><small>AVI8AI</small>PilotBriefAI</span>
         </a>
         <p style="margin: 16px 0 0;">AI weather briefing for general aviation pilots. Built by AVI8AI.</p>
+        <p class="footer-safety">PilotBriefAI is a situational-awareness aid, not a certified weather or flight-planning service. Always verify safety-critical information with official FAA-approved sources before flight.</p>
       </div>
       <div class="footer-links">
         <a href="privacy/index.html">Privacy</a>
