@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | PilotBriefAI Aviation Weather Briefing App</title>
-  <meta name="description" content="Privacy policy for PilotBriefAI, the AI aviation weather briefing app for pilots using airport weather, personal minimums, GPS, and subscription features.">
-  <link rel="canonical" href="https://avi8ai.com/privacy/">
+  <title>Privacy Policy | AVI8AI PilotBriefAI</title>
+  <meta name="description" content="Privacy policy for AVI8AI PilotBriefAI, including location, camera, photo library, account, subscription payment, and audio playback disclosures.">
+  <link rel="canonical" href="https://avi8ai.com/privacy/index.html">
   <link rel="icon" href="../assets/pilotbriefai-icon-192.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -22,48 +22,71 @@
   </header>
   <main class="legal-wrap">
     <section class="legal-hero">
-      <p class="eyebrow">Effective + last updated June 14, 2026</p>
+      <p class="eyebrow">Effective + last updated June 16, 2026</p>
       <h1>Privacy Policy</h1>
-      <p class="lead">PilotBriefAI is an aviation situational-awareness application. This Privacy Policy explains what information we collect, how we use it, and your rights as a user.</p>
+      <p class="lead">PilotBriefAI by AVI8AI is an aviation situational-awareness application. This Privacy Policy explains what information the app uses, why it is used, and how it is handled.</p>
     </section>
     <article class="legal-card">
       <h2>Privacy Policy — PilotBriefAI</h2>
-      <p>PilotBriefAI ("we", "us", or "our") is an aviation situational-awareness application. This Privacy Policy explains what information we collect, how we use it, and your rights as a user.</p>
-      <h2>1. Information We Collect</h2>
+      <p>PilotBriefAI ("we", "us", or "our") is operated by AVI8AI. We use information only as needed to provide the app, maintain user accounts, support aviation situational-awareness features, and manage subscriptions.</p>
+      <h2>1. Information We Use</h2>
       <ul>
-        <li><strong>Account information.</strong> When you create an account we collect your email address and a password hash (stored by Supabase Auth).</li>
-        <li><strong>Location.</strong> With your permission, we access your device's GPS location to identify your nearest airport and display your aircraft's position on sectional charts. Location is processed on-device and is not stored on our servers.</li>
+        <li><strong>Location data.</strong> With your permission, we use your device's GPS location to look up the nearest airport and support moving map features inside the app.</li>
+        <li><strong>Camera and photo library.</strong> We may request access to your camera or photo library when you choose to upload aircraft photos.</li>
+        <li><strong>Email and account information.</strong> We use Supabase authentication for account creation, sign-in, and account management. This may include your email address and related authentication data.</li>
         <li><strong>Personal minimums.</strong> Weather limits and preferences you enter (e.g. ceiling minimums, crosswind limits) are stored in your account so they persist across devices.</li>
-        <li><strong>Briefing telemetry.</strong> We log anonymized metadata for each briefing request: departure and destination ICAO codes, go/no-go result, response latency, and AI token counts. Used to monitor service health; not linked to you by name.</li>
-        <li><strong>Error logs.</strong> Anonymized crash and error reports that help us diagnose bugs.</li>
-        <li><strong>Subscription information.</strong> Purchases are handled by RevenueCat; we receive subscription status but not payment card details.</li>
+        <li><strong>Briefing telemetry and error logs.</strong> We may use anonymized or diagnostic metadata to monitor reliability, diagnose bugs, and improve the service.</li>
+        <li><strong>Subscription information.</strong> Paid subscriptions are processed by Apple through the App Store. We do not collect, store, or handle your credit card number or other card payment details.</li>
+        <li><strong>Audio playback.</strong> PilotBriefAI may provide LiveATC streaming playback. The microphone is not used for this feature; audio is playback only.</li>
       </ul>
       <h2>2. How We Use Your Information</h2>
       <ul>
         <li>Provide, maintain, and improve the app.</li>
-        <li>Authenticate you and sync your personal minimums across devices.</li>
+        <li>Authenticate you and maintain account access through Supabase.</li>
+        <li>Find nearby airports and display moving map context when you grant location access.</li>
+        <li>Allow aircraft photo uploads selected or captured by you.</li>
         <li>Generate AI-assisted preflight briefings based on the airports you enter.</li>
         <li>Monitor usage patterns and service reliability (anonymized).</li>
-        <li>Communicate service updates or account notices via email.</li>
+        <li>Verify subscription status through Apple where applicable.</li>
+        <li>Play LiveATC audio streams requested inside the app.</li>
+        <li>Communicate service updates, support responses, or account notices via email.</li>
       </ul>
-      <h2>3. Third-Party Services</h2>
+      <h2>3. Location Permissions</h2>
+      <p>Location access is optional and controlled by your device settings. If you deny or disable location access, nearest-airport lookup and moving map functionality may be limited or unavailable.</p>
+      <h2>4. Camera and Photo Permissions</h2>
+      <p>Camera and photo library access is used only when you choose to upload aircraft photos. You can manage or revoke these permissions in your device settings.</p>
+      <h2>5. Account Authentication</h2>
+      <p>PilotBriefAI uses Supabase to provide authentication services. Supabase may process your email address and account authentication data so you can create an account, sign in, and manage access to the app.</p>
+      <h2>6. Subscriptions and Payments</h2>
+      <p>Subscriptions and in-app purchases are processed by Apple through the App Store. PilotBriefAI does not receive your full credit card number and does not store card payment information.</p>
+      <h2>7. Audio Streaming</h2>
+      <p>LiveATC streaming, where available, is used for audio playback only. PilotBriefAI does not use your microphone and does not record audio from your device for this feature.</p>
+      <h2>8. Third-Party Services</h2>
       <ul>
         <li><strong>Supabase</strong> — database, authentication, and edge-function hosting.</li>
         <li><strong>Anthropic (Claude)</strong> — AI model used to generate briefing summaries. Briefing content is sent to Anthropic's API and is subject to Anthropic's Privacy Policy (<a href="https://www.anthropic.com/privacy">https://www.anthropic.com/privacy</a>).</li>
-        <li><strong>RevenueCat</strong> — in-app subscription management.</li>
+        <li><strong>Apple</strong> — App Store subscription purchase and payment processing.</li>
         <li><strong>FAA / NOAA / aviationweather.gov</strong> — publicly available aviation weather and NOTAM data fetched on your behalf.</li>
-        <li><strong>LiveATC.net</strong> — publicly streamed ATC audio.</li>
+        <li><strong>LiveATC.net</strong> — publicly streamed ATC audio playback.</li>
       </ul>
-      <h2>4. Data Retention</h2>
+      <h2>9. Sharing Information</h2>
+      <p>We do not sell your personal information. Information may be processed by service providers that help operate PilotBriefAI, such as Supabase for authentication, Apple for subscription payment processing, aviation data providers, and AI infrastructure providers used to generate requested briefing content.</p>
+      <h2>10. Data Retention</h2>
       <p>Account data is retained as long as your account is active. Anonymized briefing telemetry and error logs are retained for up to 90 days for operational monitoring.</p>
-      <h2>5. Account Deletion</h2>
+      <h2>11. Your Choices</h2>
+      <ul>
+        <li>You can manage location, camera, photo library, and other app permissions in your device settings.</li>
+        <li>You can manage or cancel subscriptions through your Apple ID subscription settings.</li>
+        <li>You can stop using optional features, such as photo uploads or location-based features, at any time.</li>
+      </ul>
+      <h2>12. Account Deletion</h2>
       <p>You can delete your account at any time from Settings → Account → Delete Account inside the app. Upon deletion we permanently remove your email address, personal minimums, and all briefing and error records associated with your account.</p>
-      <h2>6. Children</h2>
+      <h2>13. Children</h2>
       <p>PilotBriefAI is not directed at children under 13 and we do not knowingly collect personal information from children.</p>
-      <h2>7. Changes to This Policy</h2>
+      <h2>14. Changes to This Policy</h2>
       <p>We may update this policy periodically. We will notify you of material changes via the app or email. Continued use after the effective date constitutes acceptance.</p>
-      <h2>8. Contact</h2>
-      <p>Questions or requests? Email us at <a href="mailto:ken.lince@gmail.com">ken.lince@gmail.com</a>.</p>
+      <h2>15. Contact</h2>
+      <p>Questions or requests? Open PilotBriefAI → Settings → Support to open a ticket, send feedback, report a bug, or request a new feature.</p>
     </article>
   </main>
   <footer class="site-footer"><div class="container footer-links"><a href="../index.html">Home</a><a href="../terms/index.html">Terms</a><a href="../support/index.html">Support</a><a href="../delete-account/index.html">Delete Account</a></div></footer>
