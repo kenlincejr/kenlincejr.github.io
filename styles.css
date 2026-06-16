@@ -465,7 +465,7 @@ h3 {
   bottom: -110px;
   top: auto;
   transform: translateX(-50%);
-  width: min(220px, 54vw);
+  width: min(275px, 66vw);
   padding: 0;
   overflow: hidden;
   border-color: rgba(56, 189, 248, 0.42);
