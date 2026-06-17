@@ -434,9 +434,58 @@
             </div>
           </article>
           <article class="panel combo-card">
-            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B + FLY sectional</h3><p>Use FLY as a VFR sectional map with GPS positioning, METAR stations, weather overlays, ADS-B traffic, route lines, and more.</p></div>
+            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B + FLY sectional</h3><p>Connect a portable receiver broadcasting standard GDL90 over Wi-Fi and use FLY as a VFR sectional map with ownship, METAR stations, weather overlays, ADS-B traffic, route lines, and more.</p></div>
             <div class="product-visual combo-visual live-track-panel fly-map-panel"><img src="assets/KEEPER6-transparent.png" alt="PilotBriefAI FLY sectional map with GPS positioning, weather layers, METAR stations, and ADS-B traffic"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="adsb-receivers">
+      <div class="container">
+        <div class="receiver-compat">
+          <div class="section-head center receiver-head">
+            <p class="eyebrow">Portable ADS-B receiver support</p>
+            <h2>Works with open GDL90 <span class="nowrap">Wi&#8209;Fi.</span></h2>
+            <p class="lead">PilotBriefAI connects to any ADS-B receiver that broadcasts standard GDL90 over Wi-Fi on UDP port 4000. Join the receiver's Wi-Fi network, open FLY, and paid plans can show live ownship and traffic on your sectional.</p>
+            <div class="spec-pill"><ion-icon name="wifi"></ion-icon><span>Required spec: standard GDL90 over Wi-Fi, UDP 4000</span></div>
+          </div>
+          <figure class="receiver-hero-graphic" aria-label="Supported ADS-B receiver examples using open GDL90 Wi-Fi">
+            <picture>
+              <source media="(max-width: 680px)" srcset="assets/devices/gdl90-supported-receivers-mobile.png">
+              <img src="assets/devices/gdl90-supported-receivers.png" alt="Collage of supported ADS-B receivers: Stratux, Stratus 3, iLevil 3 AW, and uAvionix skySensor connected by Open GDL90 Wi-Fi over UDP 4000">
+            </picture>
+          </figure>
+          <div class="grid three compat-grid">
+            <article class="panel compat-card supported">
+              <div class="icon-tile"><ion-icon name="checkmark-circle"></ion-icon></div>
+              <h3>Fully supported</h3>
+              <ul class="compat-list">
+                <li><strong>Stratux</strong> DIY or pre-built receivers, including CrewDog-style builds.</li>
+                <li><strong>Appareo Stratus 3 / 3i</strong> with Open ADS-B Mode enabled in Stratus Horizon Pro.</li>
+                <li><strong>Levil iLevil 3 AW/SW and BOM</strong> native GDL90 Wi-Fi receivers.</li>
+                <li><strong>uAvionix echoUAT, skySensor, AV-Link, and SkyEcho 2</strong> where regionally legal and available.</li>
+              </ul>
+            </article>
+            <article class="panel compat-card">
+              <div class="icon-tile"><ion-icon name="settings"></ion-icon></div>
+              <h3>What to look for</h3>
+              <ul class="compat-list">
+                <li>Receiver documentation says <strong>GDL90 output</strong> or <strong>Open ADS-B mode</strong>.</li>
+                <li>It supports third-party EFB apps such as FltPlan Go, FlyQ, WingX, or similar tools.</li>
+                <li>Dynon portable or SkyView Wi-Fi may work, but uses a tweaked GDL90 stream; verify with your unit before relying on it.</li>
+              </ul>
+            </article>
+            <article class="panel compat-card unsupported">
+              <div class="icon-tile"><ion-icon name="close-circle"></ion-icon></div>
+              <h3>Not compatible</h3>
+              <ul class="compat-list">
+                <li><strong>ForeFlight Sentry, Sentry Plus, and Sentry Mini</strong> use a closed ForeFlight protocol.</li>
+                <li><strong>Garmin GDL 50, GDL 52, GDL 39, and GDL 39 3D</strong> use Garmin Connext, not open GDL90.</li>
+                <li><strong>Bad Elf</strong> units are GPS-only and do not provide ADS-B traffic.</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -560,6 +609,7 @@
               <li><ion-icon name="checkmark-circle"></ion-icon>Crosswind &amp; density altitude</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Route hazards, fuel &amp; FBOs</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Live ATC audio</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Open GDL90 ADS-B receiver support</li>
             </ul>
           </article>
 
@@ -617,6 +667,7 @@
               <tr><td>AI route hazard analysis</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Fuel and FBO availability on route</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Live ATC audio</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Open GDL90 Wi-Fi ADS-B receiver support</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr class="group"><td colspan="5">IFR Planning Suite</td></tr>
               <tr><td>AI Alternate Advisor with fuel budget and minima analysis</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>AI winds aloft and altitude advisor</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
@@ -654,6 +705,10 @@
           <details>
             <summary>Where does this fit with my EFB workflow?</summary>
             <p>Use PilotBriefAI before you open the filing workflow: brief the route, review AI-interpreted hazards and PIREPs, decide Go / Marginal / No-Go, then take that decision into ForeFlight or Garmin Pilot for charts, filing, plates, and navigation.</p>
+          </details>
+          <details>
+            <summary>Which ADS-B receivers work with FLY?</summary>
+            <p>Paid plans support any receiver broadcasting standard GDL90 over Wi-Fi on UDP port 4000, including Stratux, Appareo Stratus 3 with Open ADS-B Mode, Levil iLevil, and uAvionix echoUAT / skySensor / AV-Link devices. ForeFlight Sentry and Garmin GDL receivers use closed protocols, and Bad Elf units are GPS-only.</p>
           </details>
           <details>
             <summary>Which AI does it use?</summary>
