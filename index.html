@@ -54,11 +54,15 @@
           "METAR and TAF analysis",
           "Personal-minimums Go / Marginal / No-Go guidance",
           "Route PIREP mapping and interpretation",
+          "AI Wingman field monitor",
           "Live ATC audio",
+          "Live tail tracking on VFR sectionals",
           "ADS-B flight tracking",
-          "VFR sectional GPS map with weather layers",
-          "Georeferenced navigation in FLY mode",
+          "FLY VFR sectional map with offline chart downloads",
+          "Weather Explorer maps and imagery",
+          "Direct-To, live METARs, ADS-B traffic, and weather overlays in FLY mode",
           "IFR alternate advisor",
+          "CFI Mock Oral checkride practice from live student briefings",
           "CFI briefing share and student flight watch"
         ],
         "offers": {
@@ -77,7 +81,7 @@
             "name": "Do I still need ForeFlight or Garmin Pilot?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. PilotBriefAI does not replace charts, plates, or filing, but FLY mode now includes georeferenced VFR sectional GPS navigation. Use PilotBriefAI to brief, decide, monitor, and navigate with FLY, then use your EFB where you still need filing, plates, and full chart workflows."
+              "text": "Yes. PilotBriefAI does not replace charts, plates, filing, or certified navigation. FLY mode is a supplemental VFR situational-awareness aid with sectionals, offline chart downloads, weather, METARs, Direct-To, and ADS-B traffic context. Use PilotBriefAI to brief, decide, and monitor, then use your EFB where you need filing, plates, and full chart workflows."
             }
           },
           {
@@ -194,6 +198,27 @@
       </div>
     </section>
 
+    <section class="section alt wingman-section" id="wingman">
+      <div class="container wingman-showcase">
+        <div class="wingman-copy">
+          <p class="eyebrow"><span class="status-dot"></span>AI Wingman</p>
+          <h2>Your home-screen watch officer for the field you care about.</h2>
+          <p class="lead">AI Wingman continuously watches your selected airport, compares live METARs, forecast trends, hazards, and personal minimums, then surfaces the single insight most worth your attention before you brief.</p>
+          <div class="insight-rail wingman-rail">
+            <div><strong>One priority at a time</strong><p>Wingman promotes what changed or matters now, then lets you open the full context when you need it.</p></div>
+            <div><strong>Tap for the engine room</strong><p>Behind the Curtain shows the forecast detail, recent history, and why the safety call was made.</p></div>
+            <div><strong>Calibrated to your field</strong><p>Switch the airport from the strip and Wingman rebuilds the watch around that location.</p></div>
+            <div><strong>IFR-tier intelligence</strong><p>Included with IFR and CFI, alongside alternates, winds aloft, NBM forecast, and terrain awareness.</p></div>
+          </div>
+        </div>
+        <div class="wingman-visual" aria-label="PilotBriefAI AI Wingman Behind the Curtain detail screenshot">
+          <figure class="wingman-shot wingman-curtain">
+            <img src="assets/screenshots/ai-wingman-behind-curtain.png" alt="PilotBriefAI AI Wingman Behind the Curtain screen showing live insights for KAUS">
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="efb">
       <div class="container">
         <div class="section-head">
@@ -226,12 +251,12 @@
             <tbody>
               <tr><td>Live METAR / TAF / NOTAM data</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Charts, plates, and filing</td><td class="no">No</td><td class="yes">Yes</td><td class="no">No, by design</td></tr>
-              <tr><td>Georeferenced VFR sectional GPS navigation</td><td class="no">No</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>FLY VFR sectional map with offline chart downloads</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>AI pilot weather briefing with Go / Marginal / No-Go judged against your personal minimums</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
               <tr><td>Plain-English PAVE risk synthesis</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
               <tr><td>Route PIREPs mapped and interpreted by AI</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>Live ATC audio in the briefing flow</td><td class="no">No</td><td class="no">No</td><td class="yes">Yes</td></tr>
-              <tr><td>FLY sectional map with GPS, METARs, weather layers, and ADS-B traffic</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
+              <tr><td>Supplemental FLY sectional aid with offline maps, METARs, weather, Direct-To, and ADS-B traffic</td><td class="no">No</td><td>Partial</td><td class="yes">Yes</td></tr>
               <tr><td>Role in your workflow</td><td>Source data</td><td>File and fly</td><td>Brief, decide, then use your EFB</td></tr>
             </tbody>
           </table>
@@ -279,11 +304,11 @@
           <div class="panel brief-group">
             <div class="boi-badge live"><ion-icon name="radio-outline"></ion-icon>Live tools</div>
             <h3>Live Cockpit Tools</h3>
-            <p>Live ATC audio, ADS-B traffic, and VFR sectional GPS context built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
+            <p>Live ATC audio, ADS-B traffic, and FLY VFR sectional context built into the briefing flow — not separate apps you have to juggle at the ramp.</p>
             <ul class="brief-feat">
               <li><ion-icon name="chevron-forward"></ion-icon>Live ATC Audio</li>
-              <li><ion-icon name="chevron-forward"></ion-icon>FLY sectional GPS + ADS-B traffic</li>
-              <li><ion-icon name="chevron-forward"></ion-icon>Animated Weather Maps <span class="windy-inline">Windy.com</span></li>
+              <li><ion-icon name="chevron-forward"></ion-icon>FLY sectional map, Direct-To, METARs, weather, and ADS-B traffic</li>
+              <li><ion-icon name="chevron-forward"></ion-icon>Weather Explorer maps and imagery</li>
             </ul>
           </div>
         </div>
@@ -310,6 +335,25 @@
               <div class="gng-option active"><strong><span class="dot warn"></span>MARGINAL</strong><p>Flyable only with mitigation, alternates, and careful verification against official sources.</p></div>
               <div class="gng-option"><strong><span class="dot ifr"></span>NO-GO</strong><p>Conditions or hazards exceed your profile, aircraft, or route risk limits.</p></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="weather-explorer">
+      <div class="container weather-explorer-showcase">
+        <div class="weather-explorer-phone" aria-label="PilotBriefAI Weather Explorer screenshot">
+          <img src="assets/screenshots/weather-explorer.png" alt="PilotBriefAI Weather Explorer with radar loop, flight category stations, winds and temps aloft, and satellite imagery near KAUS">
+        </div>
+        <div class="weather-explorer-copy">
+          <p class="eyebrow">Weather Explorer</p>
+          <h2>Zoom from the big weather picture to the airport that matters.</h2>
+          <p class="lead">Pick any airport, fix, or navaid and Weather Explorer gives you an interactive weather workspace: animated radar, flight-category station dots, winds and temps aloft, and NOAA/NWS imagery without leaving the briefing flow.</p>
+          <div class="weather-tool-list">
+            <div><span class="icon-tile"><ion-icon name="radio-button-on"></ion-icon></span><strong>Flight-category map</strong><p>Station dots keep VFR, MVFR, IFR, and LIFR context visible while you pan.</p></div>
+            <div><span class="icon-tile"><ion-icon name="play-circle"></ion-icon></span><strong>Animated radar loop</strong><p>Watch precipitation move over the same sectional-style map you use for route context.</p></div>
+            <div><span class="icon-tile"><ion-icon name="flag"></ion-icon></span><strong>Winds and temps aloft</strong><p>See the winds layer tied to the selected point instead of hunting through decoded text.</p></div>
+            <div><span class="icon-tile"><ion-icon name="images"></ion-icon></span><strong>NOAA/NWS imagery</strong><p>Satellite, radar, and prog chart tabs keep the raw picture one tap away.</p></div>
           </div>
         </div>
       </div>
@@ -344,7 +388,9 @@
               <span><ion-icon name="checkmark-circle"></ion-icon>Crosswind component analysis against your aircraft limit</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Density altitude, takeoff penalty, and IMSAFE checks</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Claude calls out icing, turbulence, PIREPs, and IFR conditions on your corridor by name</span>
-              <span><ion-icon name="checkmark-circle"></ion-icon>Live ATC audio, route PIREPs, fuel, FBOs, and Windy maps</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>FLY map with offline chart downloads, Direct-To, METARs, weather, and ADS-B traffic</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Live Track tail following on a VFR sectional</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Weather Explorer, live ATC audio, route PIREPs, fuel, and FBOs</span>
             </div>
           </article>
           <article class="panel suite-card">
@@ -355,6 +401,7 @@
             <h3>IFR planning suite</h3>
             <p>For serious GA pilots who need more than legal minimums and a wall of decoded weather strings.</p>
             <div class="feature-list">
+              <span><ion-icon name="checkmark-circle"></ion-icon>AI Wingman monitors your selected field and surfaces the most urgent change</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Claude ranks alternates by real flyability, fuel budget, forecast window, and legal minima</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Claude reads FD winds and recommends cruise altitude with reasoning</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Hourly NBM forecast and terrain awareness</span>
@@ -369,6 +416,7 @@
             <p>Manage students, aircraft, teaching notes, and shared briefing records from one instructor workflow.</p>
             <div class="feature-list">
               <span><ion-icon name="checkmark-circle"></ion-icon>Claude flags teachable moments with FAR/AIM citations and classic decision traps</span>
+              <span><ion-icon name="checkmark-circle"></ion-icon>Mock Oral turns the student's live briefing into DPE-style checkride practice</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Student and aircraft profiles with separate minimums</span>
               <span><ion-icon name="checkmark-circle"></ion-icon>Share briefings with CFI notes by email or text</span>
             </div>
@@ -381,8 +429,8 @@
       <div class="container cfi-command">
         <div class="cfi-copy">
           <p class="eyebrow">For flight instructors</p>
-          <h2>Brief every student, share the lesson, then watch the flight.</h2>
-          <p class="lead">A dedicated CFI workflow built into the app — student profiles, fleet management, AI teaching notes, and live ADS-B monitoring in one place.</p>
+          <h2>Brief every student, run the oral, then watch the flight.</h2>
+          <p class="lead">A dedicated CFI workflow built into the app: student profiles, fleet management, AI teaching notes, Mock Oral checkride practice, and live ADS-B monitoring in one place.</p>
           <ul class="cfi-steps">
             <li>
               <span class="icon-tile cfi-icon"><ion-icon name="people"></ion-icon></span>
@@ -395,6 +443,10 @@
             <li>
               <span class="icon-tile cfi-icon"><ion-icon name="reader"></ion-icon></span>
               <div><strong>Teaching briefings</strong><p>Claude surfaces FAR/AIM-cited teaching points with space for your own CFI notes, shareable by email or text.</p></div>
+            </li>
+            <li>
+              <span class="icon-tile cfi-icon"><ion-icon name="school"></ion-icon></span>
+              <div><strong>Mock Oral</strong><p>Turn the student's exact briefing into a DPE-style oral with examiner tone, grounded questions, scoring, and debrief output.</p></div>
             </li>
             <li>
               <span class="icon-tile cfi-icon"><ion-icon name="radio"></ion-icon></span>
@@ -412,19 +464,58 @@
           </div>
         </div>
       </div>
+
+      <div class="container mock-oral-preview" id="mock-oral">
+        <div class="mock-oral-copy">
+          <span class="badge" style="--tier: var(--cfi-plan);">CFI exclusive</span>
+          <p class="eyebrow">Mock Oral</p>
+          <h2>The cross-country briefing becomes the checkride oral.</h2>
+          <figure class="mock-oral-command-shot">
+            <img src="assets/screenshots/mock-oral-command-card.png" alt="PilotBriefAI Run mock oral command card">
+          </figure>
+          <p class="lead">Every solo XC review already contains the raw material a DPE will use: route, weather, NOTAMs, fuel, aircraft, student minimums, and go/no-go reasoning. Mock Oral turns that exact brief into a structured examiner-style session you can run before the student ever leaves the room.</p>
+          <div class="mock-oral-flow" aria-label="Mock Oral workflow">
+            <span><ion-icon name="document-text"></ion-icon>Live brief</span>
+            <i></i>
+            <span><ion-icon name="chatbubbles"></ion-icon>DPE-style oral</span>
+            <i></i>
+            <span><ion-icon name="checkmark-done"></ion-icon>Cited debrief</span>
+          </div>
+          <div class="mock-oral-cards">
+            <div><strong>Not a generic quiz bank</strong><p>Questions are built from the student's actual KAUS -> KDFW route, live TAFs, fuel math, alternates, NOTAMs, and personal minimums.</p></div>
+            <div><strong>Four examiner tones</strong><p>Start supportive, step up to stage-check pressure, then run it like a checkride DPE when the student is ready.</p></div>
+            <div><strong>Score what matters</strong><p>Mark Got it, Partial, or Missed as you go, then turn the misses into a focused study list instead of a forgotten ramp debrief.</p></div>
+          </div>
+        </div>
+        <div class="mock-oral-visual" aria-label="PilotBriefAI Mock Oral setup and live question screenshots">
+          <div class="mock-oral-phone-pair">
+            <figure class="mock-oral-shot setup">
+              <img src="assets/screenshots/mock-oral-setup.png" alt="PilotBriefAI Mock Oral setup screen with student and examiner style controls">
+            </figure>
+            <figure class="mock-oral-shot question">
+              <img src="assets/screenshots/mock-oral-live-question.png" alt="PilotBriefAI Mock Oral live question screen with grounded fuel and weather questions">
+            </figure>
+          </div>
+          <div class="mock-oral-proof">
+            <span>From the brief</span>
+            <strong>Every question keeps the evidence visible.</strong>
+            <p>Weather, fuel, route, and minimums stay tied to the question so the CFI can coach judgment, not memory tricks.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
+    <section class="section fly-feature-section">
       <div class="container">
         <div class="section-head center">
-          <p class="eyebrow">Three tools. One app. No one else has all three.</p>
-          <h2>AI flight briefings, live ATC, and live ADS-B — together.</h2>
-          <p class="lead">Plenty of apps do one of these. PilotBriefAI puts an AI aviation weather briefer, real-time tower/ground/CTAF audio, and live aircraft tracking on a VFR sectional in one cockpit-grade workflow.</p>
+          <p class="eyebrow">Brief. Listen. Fly with context.</p>
+          <h2>FLY maps, live ATC, and live ADS-B — together.</h2>
+          <p class="lead">PilotBriefAI brings the sound of the field and a VFR flying picture into one workflow. FLY is a supplemental situational-awareness aid for VFR pilots, not a certified navigation source or replacement for your EFB.</p>
         </div>
         <div class="grid three">
           <article class="panel combo-card">
-            <div><div class="icon-tile"><ion-icon name="sparkles"></ion-icon></div><h3>AI-synthesized briefings</h3><p>Claude turns live FAA/NOAA data into a Go / Marginal / No-Go judged against your minimums, not a wall of decoded strings.</p></div>
-            <div class="product-visual combo-visual phone-frame"><img src="assets/screenshots/ai-flight-summary.png" alt="PilotBriefAI AI flight summary with marginal verdict"></div>
+            <div><div class="icon-tile"><ion-icon name="map"></ion-icon></div><h3>Build and download your FLY map</h3><p>Set a route, save it, and download chart coverage before you go so the sectional stays available when the signal gets thin.</p></div>
+            <div class="product-visual combo-visual phone-frame"><img src="assets/screenshots/fly-menu.png" alt="PilotBriefAI FLY menu showing route setup, saved route, and downloaded chart coverage"></div>
           </article>
           <article class="panel combo-card">
             <div><div class="icon-tile"><ion-icon name="radio"></ion-icon></div><h3>Live ATC audio</h3><p>Stream tower, ground, and CTAF from LiveATC.net in the briefing flow so you hear the field before you key the mic.</p></div>
@@ -434,9 +525,32 @@
             </div>
           </article>
           <article class="panel combo-card">
-            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>Live ADS-B + FLY sectional</h3><p>Connect a portable receiver broadcasting standard GDL90 over Wi-Fi and use FLY as a VFR sectional map with ownship, METAR stations, weather overlays, ADS-B traffic, route lines, and more.</p></div>
-            <div class="product-visual combo-visual live-track-panel fly-map-panel"><img src="assets/KEEPER6-transparent.png" alt="PilotBriefAI FLY sectional map with GPS positioning, weather layers, METAR stations, and ADS-B traffic"></div>
+            <div><div class="icon-tile"><ion-icon name="airplane"></ion-icon></div><h3>FLY sectional awareness</h3><p>See your VFR sectional, downloaded charts, live METARs, weather overlays, Direct-To guidance, route lines, and ADS-B traffic in one aid for VFR situational awareness.</p></div>
+            <div class="product-visual combo-visual live-track-panel fly-map-panel"><img src="assets/screenshots/fly-sectional-map.png" alt="PilotBriefAI FLY screen with downloaded VFR sectional, route line, Direct-To, METARs, weather, and ADS-B traffic"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="live-track">
+      <div class="container live-track-showcase">
+        <div class="live-track-copy">
+          <p class="eyebrow">Live Track</p>
+          <h2>Type a tail number. Watch it move on the sectional.</h2>
+          <p class="lead">Live Track lets you follow a saved aircraft or spotlight any N-number on the map. PilotBriefAI pulls the aircraft identity, paints the track over a VFR sectional, and keeps speed, altitude, and heading context visible while you watch.</p>
+          <div class="live-track-tags" aria-label="Live Track feature highlights">
+            <span><ion-icon name="search"></ion-icon>Track any tail</span>
+            <span><ion-icon name="map"></ion-icon>VFR sectional context</span>
+            <span><ion-icon name="airplane"></ion-icon>Saved aircraft</span>
+            <span><ion-icon name="pulse"></ion-icon>Live movement</span>
+          </div>
+          <div class="insight-rail compact">
+            <div><strong>Know who you are watching</strong><p>Tail, make, model, type, and saved-aircraft state stay attached to the live track.</p></div>
+            <div><strong>Map-first situational awareness</strong><p>The track sits on terrain, roads, airspace, and route context instead of an abstract radar list.</p></div>
+          </div>
+        </div>
+        <div class="live-track-phone" aria-label="PilotBriefAI Live Track tail tracking screenshot">
+          <img src="assets/screenshots/live-track-tail.png" alt="PilotBriefAI Live Track screen watching N127TJ on a VFR sectional map">
         </div>
       </div>
     </section>
@@ -608,8 +722,9 @@
               <li><ion-icon name="checkmark-circle"></ion-icon>Multi-airport route briefing</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Crosswind &amp; density altitude</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Route hazards, fuel &amp; FBOs</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Weather Explorer maps &amp; imagery</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Live ATC audio</li>
-              <li><ion-icon name="checkmark-circle"></ion-icon>Open GDL90 ADS-B receiver support</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>FLY sectional aid + GDL90 ADS-B support</li>
             </ul>
           </article>
 
@@ -623,6 +738,7 @@
             <p class="price-sub monthly-show" style="display:none">Or $59.99/yr — save 50%</p>
             <ul class="tier-features">
               <li><ion-icon name="checkmark-circle"></ion-icon>Everything in VFR</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>AI Wingman field monitor</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>AI Alternate Advisor</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Winds aloft &amp; altitude advisor</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Unlimited briefings &amp; routes</li>
@@ -639,6 +755,7 @@
             <p class="price-sub monthly-show" style="display:none">Or $119.99/yr — save 50%</p>
             <ul class="tier-features">
               <li><ion-icon name="checkmark-circle"></ion-icon>Everything in IFR</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon>Mock Oral checkride practice</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>FAR/AIM teaching callouts</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Student &amp; fleet management</li>
               <li><ion-icon name="checkmark-circle"></ion-icon>Briefing share &amp; ADS-B watch</li>
@@ -667,20 +784,26 @@
               <tr><td>AI route hazard analysis</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Fuel and FBO availability on route</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Live ATC audio</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Weather Explorer maps and imagery</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>FLY VFR sectional map with offline chart downloads</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Direct-To, live METARs, route lines, and weather overlays in FLY</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+              <tr><td>Live tail tracking on VFR sectional</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Open GDL90 Wi-Fi ADS-B receiver support</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr class="group"><td colspan="5">IFR Planning Suite</td></tr>
+              <tr><td>AI Wingman live watch-field monitor</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>AI Alternate Advisor with fuel budget and minima analysis</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>AI winds aloft and altitude advisor</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>Hourly NBM point forecast</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr><td>AI terrain awareness</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
               <tr class="group"><td colspan="5">CFI Instructor Toolkit</td></tr>
+              <tr><td>Mock Oral checkride practice from the student's live briefing</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>AI teaching callouts with FAR/AIM citations</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
-              <tr><td>Student profiles</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td>Unlimited</td></tr>
+              <tr><td>Student profiles</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td>Up to 5</td></tr>
               <tr><td>Fleet aircraft management</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>Email/text briefing share with CFI notes</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>FLY map and live ADS-B student flight watch</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
               <tr><td>Briefing PDF export and share</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
-              <tr><td>Early access and priority support</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
+              <tr><td>Early access and priority in-app support</td><td class="no">-</td><td class="no">-</td><td class="no">-</td><td class="yes">Yes</td></tr>
             </tbody>
           </table>
         </div>
@@ -696,7 +819,7 @@
         <div class="panel faq">
           <details open>
             <summary>Do I still need ForeFlight or Garmin Pilot?</summary>
-            <p>Yes, and keep them. PilotBriefAI does not replace charts, plates, or filing, but FLY mode now includes georeferenced VFR sectional GPS navigation. Use PilotBriefAI to brief, decide, monitor, and navigate with FLY, then use your EFB where you still need filing, plates, and full chart workflows.</p>
+            <p>Yes, and keep them. PilotBriefAI does not replace charts, plates, filing, or certified navigation. FLY mode is a supplemental VFR situational-awareness aid with sectionals, offline chart downloads, weather overlays, live METARs, Direct-To, and ADS-B traffic context. Use your EFB where you need filing, plates, and full chart workflows.</p>
           </details>
           <details>
             <summary>What makes it different from a weather app?</summary>
